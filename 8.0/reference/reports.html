@@ -1,0 +1,424 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>QWeb печатные формы(отчеты) &mdash; перевод на русский язык документации odoo 8.0</title>
+
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="перевод на русский язык документации odoo 8.0" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="Workflows" href="./workflows.html" />
+    <link rel="prev" title="Translating Modules" href="./translations.html" />
+</head>
+
+<body role="document">
+    <header class="">
+        <figure class="card top">
+            <span class="card-img" style="background-image: url('../_static/banners/reports.jpg');"></span>
+        </figure>
+    </header>
+    <nav id="main_navbar" class="navbar ">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+                    <span class="sr-only">Навигация</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <nav class="nav navbar-nav navbar-left">
+                    <li id="main-back">
+                        <a href="../index.html" class="mdi-navigation-arrow-back"></a>
+                    </li>
+                    <li>
+                        <h1 id="main_title">QWeb печатные формы(отчеты)</h1>
+                    </li>
+                </nav>
+            </div>
+
+            <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+
+                <ul class="navbar-nav navbar-right nav">
+                    <li class="versions">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                8.0 <span class="caret"></span>
+              </a>
+                        <ul class="dropdown-menu" role="menu">
+
+                            <li><a href="https://www.odoo.com/documentation/9.0/reference/reports.html">9.0</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="current navbar-nav navbar-right nav">
+                    <li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../tutorials.html" class="dropdown-toggle internal reference">Руководства</a>
+                        <ul class="current dropdown-menu">
+                            <li class="toctree-l2"><a href="themes.html" class="internal reference">Создание своей темы</a></li>
+                            <li class="toctree-l2"><a href="website.html" class="internal reference">Создание вебсайта</a></li>
+                            <li class="current toctree-l2"><a href="" class="current internal reference">Создание модуля</a></li>
+                            <li class="toctree-l2"><a href="web.html" class="internal reference">Создание расширений для интерфейса</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a href="../api_integration.html" class="internal reference">Web Service API</a>
+                        <ul></ul>
+                    </li>
+                    <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../setup.html" class="dropdown-toggle internal reference">Настройка</a>
+                        <ul class="dropdown-menu">
+                            <li class="toctree-l2"><a href="../setup/install.html" class="internal reference">Установка Odoo</a></li>
+                            <li class="toctree-l2"><a href="../setup/deploy.html" class="internal reference">Развертывание Odoo</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../reference.html" class="dropdown-toggle internal reference">Справка</a>
+                        <ul class="dropdown-menu">
+                            <li class="toctree-l2"><a href="../reference/orm.html" class="internal reference">ORM API</a></li>
+                            <li class="toctree-l2"><a href="../reference/data.html" class="internal reference">Файлы с данными</a></li>
+                            <li class="toctree-l2"><a href="../reference/actions.html" class="internal reference">Действия</a></li>
+                            <li class="toctree-l2"><a href="../reference/views.html" class="internal reference">Представления</a></li>
+                            <li class="toctree-l2"><a href="../reference/module.html" class="internal reference">Модули</a></li>
+                            <li class="toctree-l2"><a href="../reference/cmdline.html" class="internal reference">Интерфейс коммандной строки: odoo.py</a></li>
+                            <li class="toctree-l2"><a href="../reference/security.html" class="internal reference">Безопасность в Odoo</a></li>
+                            <li class="toctree-l2"><a href="../reference/testing.html" class="internal reference">Тестирование модулей</a></li>
+                            <li class="toctree-l2"><a href="../reference/http.html" class="internal reference">Web Controllers</a></li>
+                            <li class="toctree-l2"><a href="../reference/qweb.html" class="internal reference">QWeb</a></li>
+                            <li class="toctree-l2"><a href="../reference/javascript.html" class="internal reference">Javascript</a></li>
+                            <li class="toctree-l2"><a href="../reference/translations.html" class="internal reference">Перевод Модулей</li>
+                            <li class="current toctree-l2"><a href="" class="current internal reference">Печатные формы(Отчеты) на QWeb</a></li>
+                            <li class="toctree-l2"><a href="../reference/workflows.html" class="internal reference">Бизнес-процессы</a></li>
+                            <li class="toctree-l2"><a href="../reference/guidelines.html" class="internal reference">Методические рекомендации по Odoo</a></li>
+                            <li class="toctree-l2"><a href="../reference/upgrade_api.html" class="internal reference">API для обновления</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../business.html" class="dropdown-toggle internal reference">Business Mementoes</a>
+                        <ul class="dropdown-menu">
+                            <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/accounting.html" class="external reference">Accounting Memento (US GAAP)</a></li>
+                            <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/double-entry.html" class="external reference">Double-Entry Inventory</a></li>
+                            <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/valuation.html" class="external reference">Inventory Valuations</a></li>
+                        </ul>
+            </nav>
+        </div>
+    </nav>
+
+
+    <main class="container ">
+
+        <div class="row">
+
+            <aside>
+                <div class="navbar-aside text-center">
+                    <div class="logo_box">
+                        <span class="logo"></span> Документация
+                    </div>
+                    <ul class="list-group text-left nav">
+                        <li class="list-group-item"><a href="#report" class="ripple internal reference">Печатная форма(отчет)</a></li>
+                        <li class="list-group-item"><a href="#report-template" class="ripple internal reference">Шаблон печатной формы(отчета)</a>
+                            <ul>
+                                <li class="list-group-item"><a href="#minimal-viable-template" class="ripple internal reference">Минимально жизнеспособный шаблон</a></li>
+                                <li class="list-group-item"><a href="#translatable-templates" class="ripple internal reference">Переводимые шаблоны</a></li>
+                                <li class="list-group-item"><a href="#barcodes" class="ripple internal reference">Штрих-коды</a></li>
+                                <li class="list-group-item"><a href="#useful-remarks" class="ripple internal reference">Полезные замечания</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><a href="#paper-format" class="ripple internal reference">Формат бумаги</a></li>
+                        <li class="list-group-item"><a href="#custom-reports" class="ripple internal reference">Произвольная печатная форма(отчет)</a></li>
+                        <li class="list-group-item"><a href="#reports-are-web-pages" class="ripple internal reference">Печатные формы(отчеты) - это веб страницы</a></li>
+                    </ul>
+
+                    <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/reports.rst" class="gith-link">
+              Доступно на GitHub
+          </a></p>
+
+                </div>
+            </aside>
+
+            <article class="doc-body ">
+
+
+                <section id="qweb-reports">
+                    <p>Печатные формы(отчеты) написаны на HTML/QWeb, так же как и обычные представления<i>(view)</i> в Odoo. Вы можете использовать обычные <a href="qweb.html#reference-qweb" class="internal reference"><span >Инструменты управления выводом через QWeb</span></a>.
+                        Создаение PDF реализовано через <a href="http://wkhtmltopdf.org" class="external reference">wkhtmltopdf</a>.</p>
+                    <p>Если вы хотите создать печатную форму к конкретной модели данных, вы должны опеределить this <a href="#reference-reports-report" class="internal reference"><span >Печатную форму(отчет)</span></a> и
+                        <a href="#reference-reports-templates" class="internal reference"><span >Шаблон печатной формы(отчета)</span></a> который вы хотите исопльзовать. Если пожелаете вы можете так же указать специальный <a href="#reference-reports-paper-formats"
+                            class="internal reference"><span >Формат Страницы</span></a> для этой печатной формы(отчета). В конце концов, если вы хотите получить данные не только из своей модели данных вы можете определить класс для
+                        <a href="#reference-reports-custom-reports" class="internal reference"><span >Произвольной печатной формы(отчета)</span></a>, который даст вам доступ к большему количеству моделей данных и записей в шаблоне.</p>
+                </section>
+                <section id="report"><i id="reference-reports-report"></i>
+                    <h2>Печатная форма(отчет)</h2>
+                    <p>Каждая печатная форма должна быть объявлена как <a href="actions.html#reference-actions-report" class="internal reference"><span >report action</span></a>.</p>
+                    <p>Для простоты, элемент <code>&lt;report&gt;</code> доступен для быстрого объявления печатной формы, что быстрее чем описывать <a href="actions.html#reference-actions-report" class="internal reference"><span >действие</span></a> и его
+                        окружение вручную. Элемент <code>&lt;report&gt;</code> может иметь слеудющие атрибуты:</p>
+                    <dl><dt><code >id</code></dt>
+                        <dd><a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">внешний id</span></a> сгенерированной записи</dd><dt><code>name</code> (обязательный)</dt>
+                        <dd>необходим только как мнемоника/описание для печатной формы(отчета), для поиска её в каком-либо списке
+                        </dd><dt><code>model</code> (обязательный)</dt>
+                        <dd>модель данных, к которой будет привязана печатная форма(отчет)</dd><dt><code>report_type</code> (обязательный)</dt>
+                        <dd>укажите <code>qweb-pdf</code> для PDF формата печатных форм или<code>qweb-html</code> для HTML</dd><dt><code >report_name</code></dt>
+                        <dd>имя вашей печатной формы (это будет имя вашего PDF файла)</dd><dt><code >groups</code></dt>
+                        <dd><a href="orm.html#openerp.fields.Many2many" class="internal reference" title="openerp.fields.Many2many"><code class="py xref py-class">Many2many</code></a> поле для групп, имеющих доступ к просмотру/использованию текущей печатной
+                            формы</dd><dt><code >attachment_use</code></dt>
+                        <dd>если установлено как True, печатная форма будет прикреплена к записи и будет иметь имя сгенерированное выражением
+                            <code>attachment</code>; вы можете это использовать если вам необходимо формировать печатную форму только единожды</dd><dt><code >attachment</code></dt>
+                        <dd>выражение на python задающее имя печатной формы; запись доступна как переменная <code>object</code></dd>
+                    </dl>
+                    <div role="alert" class="alert-warning alert">
+                        <p class="alert-title">Внимание</p>
+                        <p>Формат бумаги не может быть задан через <code>&lt;report&gt;</code>, а должен быть добавлен после, через расширение <code>&lt;record&gt;</code> непосредственно у <a href="actions.html#reference-actions-report" class="internal reference"><span >report action</span></a>:</p>
+                        <div
+                            class="highlight-xml">
+                            <div class="highlight"><pre><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;&lt;report_id&gt;&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.actions.report.xml&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;paperformat_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;&lt;paperformat&gt;&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+                    </div>
+        </div>
+        <p>Пример:</p>
+        <div class="highlight-xml">
+            <div class="highlight"><pre><span class="nt">&lt;report</span>
+    <span class="na">id=</span><span class="s">&quot;account_invoices&quot;</span>
+    <span class="na">model=</span><span class="s">&quot;account.invoice&quot;</span>
+    <span class="na">string=</span><span class="s">&quot;Invoices&quot;</span>
+    <span class="na">report_type=</span><span class="s">&quot;qweb-pdf&quot;</span>
+    <span class="na">name=</span><span class="s">&quot;account.report_invoice&quot;</span>
+    <span class="na">file=</span><span class="s">&quot;account.report_invoice&quot;</span>
+    <span class="na">attachment_use=</span><span class="s">&quot;True&quot;</span>
+    <span class="na">attachment=</span><span class="s">&quot;(object.state in (&#39;open&#39;,&#39;paid&#39;)) and</span>
+<span class="s">        (&#39;INV&#39;+(object.number or &#39;&#39;).replace(&#39;/&#39;,&#39;&#39;)+&#39;.pdf&#39;)&quot;</span>
+<span class="nt">/&gt;</span>
+</pre></div>
+        </div>
+        </section>
+        <section id="report-template"><i id="reference-reports-templates"></i>
+            <h2>Шаблон печатной формы</h2></section>
+        <section id="minimal-viable-template">
+            <h3>Минимально жизнеспособный шаблон</h3>
+            <p>Минимальный шаблон будет выглятеть следующим образом:</p>
+            <div class="highlight-xml">
+                <div class="highlight"><pre><span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;report_invoice&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;report.html_container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;docs&quot;</span> <span class="na">t-as=</span><span class="s">&quot;o&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;report.external_layout&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h2&gt;</span>Report title<span class="nt">&lt;/h2&gt;</span>
+                    <span class="nt">&lt;p&gt;</span>This object&#39;s name is <span class="nt">&lt;span</span> <span class="na">t-field=</span><span class="s">&quot;o.name&quot;</span><span class="nt">/&gt;&lt;/p&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/t&gt;</span>
+        <span class="nt">&lt;/t&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</pre></div>
+            </div>
+            <p>Вызов <code>external_layout</code> добавит верхний и нижний колонтитулы по умолчанию. Тело PDF будет заполнено данными внутри <code>&lt;div
+class="page"&gt;</code>. <code>id</code> шаблона должно соответствовать <code>name</code> в объявлении печатной формы; к примеру <code>account.report_invoice</code> из примера выше. Так как это QWeb шаблон вы можете получить доступ ко всем полям объектов
+                <code>docs</code> полученных шаблоном.</p>
+            <p>Есть несколько специфических переменных используемых при создании печатных форм, вот основные:</p>
+            <dl><dt><code>docs</code></dt>
+                <dd>записи для текущей печатной формы</dd><dt><code>doc_ids</code></dt>
+                <dd>список идентификаторов записей <code>docs</code></dd>
+                <dt><code>doc_model</code></dt>
+                <dd>модель данных для записей<code>docs</code></dd>
+                <dt><code>time</code></dt>
+                <dd>ссылка на<a href="https://docs.python.org/2/library/time.html#module-time" class="external reference" title="(in Python v2.7)"><code>time</code></a> из стандартной библиотеки Python</dd>
+                <dt><code>translate_doc</code></dt>
+                <dd>
+                    <p>функция для перевода части печатной формы. Должна использоваться следующим образом:</p>
+                    <div class="highlight-xml">
+                        <div class="highlight"><pre><span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;doc_ids&quot;</span> <span class="na">t-as=</span><span class="s">&quot;doc_id&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;t</span> <span class="na">t-raw=</span><span class="s">&quot;translate_doc(doc_id, doc_model, &#39;partner_id.lang&#39;, account.report_invoice_document&#39;)&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/t&gt;</span>
+</pre></div>
+                    </div>
+                </dd><dt><code>user</code></dt>
+                <dd>поле <code>res.user</code> пользователя печатающего печатную форму</dd>
+                <dt><code>res_company</code></dt>
+                <dd>поле компания текущего пользователя</dd>
+            </dl>
+            <p>Если вы хотите иметь доступ к другим записям/моделям данных в шаблоне вам необходимо использовать
+                <a href="#reference-reports-custom-reports" class="internal reference"><span>произвольную печатную форму</span></a>.</p>
+        </section>
+        <section id="translatable-templates">
+            <h3>Переводимые шаблоны</h3>
+            <p>Если вы хотите перевести печатную форму (к примеру на язык клиента),
+вам необходимо определеить два шаблона:</p>
+            <ul>
+                <li>Основной шаблон</li>
+                <li>Переводимый документ</li>
+            </ul>
+            <p>Вы можете вызвать <i>translate_doc</i> из вашего основного шаблона чтобы получить переведенный документ.
+Если вы хотите видеть детали перевода на бэкэнде вы можете перейти в <span class="menuselection">Settings ‣ Reports ‣ Report ‣
+&lt;report_name&gt; ‣ Search associated QWeb views ‣ &lt;translatable_document&gt; ‣
+Associated translations</span>.</p>
+            <p>К примеру давайте посмотрим на печатную форму Sale Order  из модуля Продажи:</p>
+            <div class="highlight-xml">
+                <div class="highlight"><pre><span class="c">&lt;!-- Main template --&gt;</span>
+<span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;sale.report_saleorder&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;report.html_container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;t</span> <span class="na">t-foreach=</span><span class="s">&quot;doc_ids&quot;</span> <span class="na">t-as=</span><span class="s">&quot;doc_id&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;t</span> <span class="na">t-raw=</span><span class="s">&quot;translate_doc(doc_id, doc_model, &#39;partner_id.lang&#39;, &#39;sale.report_saleorder_document&#39;)&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/t&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+
+<span class="c">&lt;!-- Translatable template --&gt;</span>
+<span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;report_saleorder_document&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t</span> <span class="na">t-call=</span><span class="s">&quot;report.external_layout&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;strong</span> <span class="na">t-if=</span><span class="s">&quot;o.partner_shipping_id == o.partner_invoice_id&quot;</span><span class="nt">&gt;</span>Invoice and shipping address:<span class="nt">&lt;/strong&gt;</span>
+                    <span class="nt">&lt;strong</span> <span class="na">t-if=</span><span class="s">&quot;o.partner_shipping_id != o.partner_invoice_id&quot;</span><span class="nt">&gt;</span>Invoice address:<span class="nt">&lt;/strong&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">t-field=</span><span class="s">&quot;o.partner_invoice_id&quot;</span> <span class="na">t-field-options=</span><span class="s">&quot;{&amp;quot;no_marker&amp;quot;: true}&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;...&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oe_structure&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/t&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</pre></div>
+            </div>
+            <p>Основной шаблон вызывает <i>translate_doc</i> при помощи параметра <code>partner_id.lang</code> ,
+что означает что он использует  <a href="#reference-reports-custom-reports" class="internal reference"><span>модель данных произвольной печатной формы</span></a> чтобы получить доступ к записи <code>res.partner</code></p>
+        </section>
+        <section id="barcodes">
+            <h3>Штрих-коды</h3>
+            <p>Штрих-коды это изображения которые возвращает контроллер и которое могут быть легко встроены в печатную форму благодаря синтаксису QWeb:</p>
+            <div class="highlight-html">
+                <div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">t-att-src=</span><span class="s">&quot;&#39;/report/barcode/QR/%s&#39; % &#39;My text in qr code&#39;&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+            </div>
+            <p>Дополнительные параметры могут быть переданы в виде запроса</p>
+            <div class="highlight-html">
+                <div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">t-att-src=</span><span class="s">&quot;&#39;/report/barcode/?</span>
+<span class="s">    type=%s&amp;value=%s&amp;width=%s&amp;height=%s&#39;%(&#39;QR&#39;, &#39;text&#39;, 200, 200)&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+            </div>
+        </section>
+        <section id="useful-remarks">
+            <h3>Полезные замечания</h3>
+            <ul>
+                <li>Для создания шаблонов печатных форм можно использовать Twitter Bootstrap и FontAwesome
+                </li>
+                <li>Локальные CSS-стили можно помещать непосредственно в шаблон</li>
+                <li>
+                    <p>Глобальные CSS-стили могут быть вставлены в основной layout печатной формы через наследование шаблона и вставкой вашего CSS:</p>
+                    </li><div class="highlight-xml">
+                        <div class="highlight"><pre><span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;report_saleorder_style&quot;</span> <span class="na">inherit_id=</span><span class="s">&quot;report.style&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xpath</span> <span class="na">expr=</span><span class="s">&quot;.&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;t&gt;</span>
+      .example-css-class {
+        background-color: red;
+      }
+    <span class="nt">&lt;/t&gt;</span>
+  <span class="nt">&lt;/xpath&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</pre></div>
+                    </div>
+                <li>Если так случилось, что ваш PDF потерял стили, пожалуйста ознакомьтесь с
+                    <a href="../howtos/backend.html#reference-backend-reporting-printed-reports-pdf-without-styles" class="internal reference"><span >этими инструкциями</span></a>.</li>
+            </ul>
+        </section>
+        <section id="paper-format"><i id="reference-reports-paper-formats"></i>
+            <h2>Формат бумаги</h2>
+            <p>Формат бумаги определяется в записи <code>report.paperformat</code> и может содержать слещующие атрибуты:</p>
+            <dl>
+                <dt><code >name</code> (обязательно)</dt><dd>необходим только как мнемоника/описание для печатной формы(отчета), для поиска её в каком-либо списке</dd>
+                <dt><code >description</code></dt><dd>небольшое описание вашего формата</dd>
+                <dt><code >format</code></dt><dd>уже предопределенный формат (A0 → A9, B0 → B10, Legal, Letter, Tabloid,...) или <code>custom</code>; A4 установлен по умолчанию. Вы не можете использовать не <i>custom</i> формат если хотите определить параметры страницы.</dd>
+                <dt><code >dpi</code></dt><dd>выходной DPI; 90 по умолчанию</dd>
+                <dt><code >margin_top</code>, <code >margin_bottom</code>, <code >margin_left</code>, <code >margin_right</code></dt><dd>margin размеры полей в миллиметрах</dd>
+                <dt><code >page_height</code>, <code >page_width</code></dt><dd>размеры страницы в миллиметрах</dd>
+                <dt><code >orientation</code></dt><dd>Ориентация страницы: <code>Landscape</code>(Альбомная) и <code>Portrait</code>(Книжная)</dd>
+                <dt><code >header_line</code></dt><dd>флаг <i>boolean</i> отвечающий за отображение строки заголовка</dd>
+                <dt><code >header_spacing</code></dt><dd>отступ от заголовка в миллиметрах</dd>
+            </dl>
+            <p>Пример:</p>
+            <div class="highlight-xml">
+                <div class="highlight"><pre><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;paperformat_frenchcheck&quot;</span> <span class="na">model=</span><span class="s">&quot;report.paperformat&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>French Bank Check<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;default&quot;</span> <span class="na">eval=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;format&quot;</span><span class="nt">&gt;</span>custom<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;page_height&quot;</span><span class="nt">&gt;</span>80<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;page_width&quot;</span><span class="nt">&gt;</span>175<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;orientation&quot;</span><span class="nt">&gt;</span>Portrait<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;margin_top&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;margin_bottom&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;margin_left&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;margin_right&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;header_line&quot;</span> <span class="na">eval=</span><span class="s">&quot;False&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;header_spacing&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;dpi&quot;</span><span class="nt">&gt;</span>80<span class="nt">&lt;/field&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+            </div>
+        </section>
+        <section id="custom-reports"><i id="reference-reports-custom-reports"></i>
+            <h2>Произвольная печатная форма(отчет)</h2>
+            <p>У модели данных печатной формы(отчета) имеется стандартная функция <code>get_html</code>, которая ищет модель данных с именем <code class="samp">report.<em>module.report_name</em></code>. Если таковая найдена, то она используется для вызова движка QWeb; в протичном случае будет использована стандартная функция. Если вы хотите кастомизировать свою печатную форму(отчет) включив больше сущностей в шаблон(таких как записи из других моделей данных), вы можете определить эти модели данных, переписав функцию <code>render_html</code> и передавая объекты в <code>docargs</code> словарь:</p>
+            <div class="highlight-python">
+                <div class="highlight"><pre><span class="kn">from</span> <span class="nn">openerp</span> <span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">models</span>
+
+<span class="k">class</span> <span class="nc">ParticularReport</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">AbstractModel</span><span class="p">):</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="s">&#39;report.module.report_name&#39;</span>
+    <span class="nd">@api.multi</span>
+    <span class="k">def</span> <span class="nf">render_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">report_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s">&#39;report&#39;</span><span class="p">]</span>
+        <span class="n">report</span> <span class="o">=</span> <span class="n">report_obj</span><span class="o">.</span><span class="n">_get_report_from_name</span><span class="p">(</span><span class="s">&#39;module.report_name&#39;</span><span class="p">)</span>
+        <span class="n">docargs</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s">&#39;doc_ids&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ids</span><span class="p">,</span>
+            <span class="s">&#39;doc_model&#39;</span><span class="p">:</span> <span class="n">report</span><span class="o">.</span><span class="n">model</span><span class="p">,</span>
+            <span class="s">&#39;docs&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">report_obj</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s">&#39;module.report_name&#39;</span><span class="p">,</span> <span class="n">docargs</span><span class="p">)</span>
+</pre></div>
+            </div>
+        </section>
+        <section id="reports-are-web-pages">
+            <h2>Печатные формы(отчеты) - это веб страницы</h2>
+            <p>Печатные формы(отчеты) динамически генерируются модулем <i>report</i> и могут быть доступны прямо по URL:</p>
+            <p>Например, вы можете открыть печатную форму(отчет) Sale Order в html-виде перейдя по ссылке <code>http://&lt;server-address&gt;/report/html/sale.report_saleorder/38</code>
+            </p>
+            <p>Или pdf-версию по ссылке <code>http://&lt;server-address&gt;/report/pdf/sale.report_saleorder/38</code>
+            </p>
+        </section>
+
+        </article>
+        </div>
+
+        <div id="mask"></div>
+    </main>
+
+    <div class="floating_action_container">
+        <a id="floating_action" class="ripple" href="#">
+            <i class="mdi-action-explore"></i>
+        </a>
+        <div id="floating_action_menu">
+            <span class="bubble"></span>
+            <ul class="list-group content">
+                <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+                <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+                <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+                <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+                <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

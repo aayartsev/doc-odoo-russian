@@ -1,0 +1,754 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Файлы данных &mdash; перевод на русский язык документации odoo 8.0</title>
+
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="перевод на русский язык документации odoo 8.0" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="Actions" href="../actions.html" />
+    <link rel="prev" title="ORM API" href="../orm.html" />
+</head>
+
+<body role="document">
+    <header class="">
+        <figure class="card top">
+            <span class="card-img" style="background-image: url('../_static/banners/data_files.jpg');"></span>
+        </figure>
+    </header>
+    <nav id="main_navbar" class="navbar ">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+                    <span class="sr-only">Навигация</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <nav class="nav navbar-nav navbar-left">
+                    <li id="main-back">
+                        <a href="../index.html" class="mdi-navigation-arrow-back"></a>
+                    </li>
+                    <li>
+                        <h1 id="main_title">Файлы с данными</h1>
+                    </li>
+                </nav>
+            </div>
+
+            <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+
+                <ul class="navbar-nav navbar-right nav">
+                    <li class="versions">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                8.0 <span class="caret"></span>
+              </a>
+                        <ul class="dropdown-menu" role="menu">
+
+                            <li><a href="https://www.odoo.com/documentation/9.0/reference/data.html">9.0</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="current navbar-nav navbar-right nav">
+                    <li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../tutorials.html" class="dropdown-toggle internal reference">Руководства</a>
+                        <ul class="current dropdown-menu">
+                            <li class="toctree-l2"><a href="../howtos/themes.html" class="internal reference">Создание своей темы</a></li>
+                            <li class="toctree-l2"><a href="../howtos/website.html" class="internal reference">Создание вебсайта</a></li>
+                            <li class="toctree-l2"><a href="../howtos/backend.html" class="current internal reference">Создание модуля</a></li>
+                            <li class="toctree-l2"><a href="../howtos/web.html" class="internal reference">Создание расширений для интерфейса</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a href="../api_integration.html" class="internal reference">Web Service API</a>
+                        <ul></ul>
+                    </li>
+                    <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../setup.html" class="dropdown-toggle internal reference">Настройка</a>
+                        <ul class="dropdown-menu">
+                            <li class="toctree-l2"><a href="../setup/install.html" class="internal reference">Установка Odoo</a></li>
+                            <li class="toctree-l2"><a href="../setup/deploy.html" class="internal reference">Развертывание Odoo</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../reference.html" class="dropdown-toggle internal reference">Справка</a>
+                        <ul class="dropdown-menu">
+                            <li class="toctree-l2"><a href="../reference/orm.html" class="internal reference">ORM API</a></li>
+                            <li class="toctree-l2"><a href="" class="internal reference">Файлы с данными</a></li>
+                            <li class="toctree-l2"><a href="../reference/actions.html" class="internal reference">Действия</a></li>
+                            <li class="toctree-l2"><a href="../reference/views.html" class="internal reference">Представления</a></li>
+                            <li class="toctree-l2"><a href="../reference/module.html" class="internal reference">Модули</a></li>
+                            <li class="toctree-l2"><a href="../reference/cmdline.html" class="internal reference">Интерфейс коммандной строки: odoo.py</a></li>
+                            <li class="toctree-l2"><a href="../reference/security.html" class="internal reference">Безопасность в Odoo</a></li>
+                            <li class="toctree-l2"><a href="../reference/testing.html" class="internal reference">Тестирование модулей</a></li>
+                            <li class="toctree-l2"><a href="../reference/http.html" class="internal reference">Web Controllers</a></li>
+                            <li class="toctree-l2"><a href="../reference/qweb.html" class="internal reference">QWeb</a></li>
+                            <li class="toctree-l2"><a href="../reference/javascript.html" class="internal reference">Javascript</a></li>
+                            <li class="toctree-l2"><a href="../reference/translations.html" class="internal reference">Перевод Модулей</li>
+                            <li class="toctree-l2"><a href="../reference/reports.html" class="internal reference">Печатные формы(Отчеты) на QWeb</a></li>
+                            <li class="toctree-l2"><a href="../reference/workflows.html" class="internal reference">Бизнес-процессы</a></li>
+                            <li class="toctree-l2"><a href="../reference/guidelines.html" class="internal reference">Методические рекомендации по Odoo</a></li>
+                            <li class="toctree-l2"><a href="../reference/upgrade_api.html" class="internal reference">API для обновления</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../business.html" class="dropdown-toggle internal reference">Business Mementoes</a>
+                        <ul class="dropdown-menu">
+                            <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/accounting.html" class="external reference">Accounting Memento (US GAAP)</a></li>
+                            <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/double-entry.html" class="external reference">Double-Entry Inventory</a></li>
+                            <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/valuation.html" class="external reference">Inventory Valuations</a></li>
+                        </ul>
+            </nav>
+        </div>
+    </nav>
+
+
+    <main class="container ">
+
+        <div class="row">
+
+            <aside>
+                <div class="navbar-aside text-center">
+                    <div class="logo_box">
+                        <span class="logo"></span> Документация
+                    </div>
+                    <ul class="list-group text-left nav">
+                        <li class="list-group-item"><a href="#structure" class="ripple internal reference">Структура</a></li>
+                        <li class="list-group-item"><a href="#core-operations" class="ripple internal reference">Базовые операции</a>
+                            <ul>
+                                <li class="list-group-item"><a href="#record" class="ripple internal reference"><code >record</code></a>
+                                    <ul>
+                                        <li class="list-group-item"><a href="#field" class="ripple internal reference"><code >field</code></a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item"><a href="#delete" class="ripple internal reference"><code >delete</code></a></li>
+                                <li class="list-group-item"><a href="#function" class="ripple internal reference"><code >function</code></a></li>
+                                <li class="list-group-item"><a href="#workflow" class="ripple internal reference"><code >workflow</code></a></li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><a href="#shortcuts" class="ripple internal reference">Ярлыки</a>
+                            <ul>
+                                <li class="list-group-item"><a href="#menuitem" class="ripple internal reference"><code >menuitem</code></a></li>
+                                <li class="list-group-item"><a href="#template" class="ripple internal reference"><code >template</code></a></li>
+                                <li class="list-group-item"><a href="#report" class="ripple internal reference"><code >report</code></a></li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><a href="#csv-data-files" class="ripple internal reference">файлы данных CSV</a></li>
+                    </ul>
+
+                    <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/data.rst" class="gith-link">
+              Доступно на GitHub
+          </a></p>
+
+                </div>
+            </aside>
+
+            <article class="doc-body ">
+
+
+                <section id="data-files"><i id="reference-data"></i>
+                    <p>Odoo это управляемая данными система и большая часть описания модуля это описание различных записей, которые управляют: UI (меню и представления), безопасность (права доступа and правила доступа), печатные формы(отчеты) и обычные данные описаны через записи в таблицах базы данных.</p>
+                </section>
+                <section id="structure">
+                    <h2>Структура</h2>
+                    <p>Основной способ описать данныхе в Odoo это XML файлы: Основная структура XML файла следующая:</p>
+                    <ul>
+                        <li>Вложенные корневые элементы <code>openerp</code> и <code>data</code></li>
+                        <li>Любое количество рабочих элементов в пределах <code>data</code></li>
+                    </ul>
+                    <div class="highlight-xml">
+                        <div class="highlight"><pre><span class="c">&lt;!-- корневой элемент файла --&gt;</span>
+<span class="nt">&lt;openerp&gt;&lt;data&gt;</span>
+  <span class="nt">&lt;operation/&gt;</span>
+  ...
+<span class="nt">&lt;/data&gt;&lt;/openerp&gt;</span>
+</pre></div>
+                    </div>
+                    <p>Файлы данных выполняются последовательно, операции могут относиться только к результату операции, определенной ранее</p>
+                </section>
+                <section id="core-operations">
+                    <h2>Базовые операции</h2></section>
+                <section id="record"><i id="reference-data-record"></i>
+                    <h3><code >record</code></h3>
+                    <p><code>record</code> надлежащим образом определяет или обновляет запись в базе данных, имеет следующие атрибуты:</p>
+                    <dl><dt><code >model</code> (обязательный)</dt>
+                        <dd>имя модели данных которую необходимо создать (или обновить)</dd><dt><code >id</code></dt>
+                        <dd>
+                            <p><a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">внешний идентификатор</span></a> для этой записи. Настоятельно рекомендуется, чтобы обеспечить</p>
+                            <ul>
+                                <li>создание записи, позволяет последующим определениям также модифицировать или ссылаться на эту запись</li>
+                                <li>модификацию записи, для того чтобы изменить ее значения</li>
+                            </ul>
+                        </dd><dt><code >context</code></dt>
+                        <dd>контекст используется когда запись создается</dd>
+                        <dt><code >forcecreate</code></dt>
+                        <dd>
+                            <p>в режиме обновления запись должна создаться в том случае если она не существует</p>
+                            <p>Требует <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>, по умолчанию <code>True</code>.</p>
+                        </dd>
+                    </dl>
+                </section>
+                <section id="field">
+                    <h4><code >field</code></h4>
+                    <p>Каждая запись может состоять из <code>field</code> тэгов, определяющих значения полей при создании записи. A <code>record</code> без <code>field</code> будет использовать все значение по умолчанию (при создании) или ничего не делать (при обновлении).</p>
+                    <p>A <code>field</code> имеет обязательный атрибут <code>name</code>, чтобы назначить имя для поля, и различные методы чтобы определить само значение поля:</p>
+                    <dl><dt>Ничего</dt>
+                        <dd>если значение не предусмотрено для поля, неявное значение <code>False</code> будет установлено для поля. Может быть использовано для очистки поля, или не использовать значение по умолчанию для поля.</dd>
+                        <dt><code >search</code></dt>
+                        <dd>
+                            <p>для <a href="orm.html#reference-orm-fields-relational" class="internal reference"><span >связанных полей</span></a>, должен быть <a href="orm.html#reference-orm-domains" class="internal reference"><span >домен</span></a> на модели данных поля.</p>
+                            <p>Назначит числовое выражение домену, найдет модель данных поля используя его и установит результаты поиска как значение поля. Будет использовать только первый результат если поле <a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a></p>
+                        </dd>
+                        <dt><code >ref</code></dt>
+                        <dd>
+                            <p>если <code>ref</code> атрибут используется, его значение должно быть действительным
+                                <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">внешним id</span></a>, который будет находится и устаналиваться в качестве значения поля.</p>
+                            <p>В основном для <a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a> и
+                                <a href="orm.html#openerp.fields.Reference" class="internal reference" title="openerp.fields.Reference"><code class="py xref py-class">Reference</code></a> полей</p>
+                        </dd><dt><code >type</code></dt>
+                        <dd>
+                            <p>если <code>type</code> атрибут используется, он используется для интерпретации и преобразования содержимого поля. Содержимое поля может быть сформировано с помощью внешнего файлом используя <code>file</code> атрибут, или через тело узла.</p>
+                            <p>Доступные типы:</p>
+                            <dl><dt><code >xml</code>, <code >html</code></dt>
+                                <dd>извлекает <code>field</code> дочерний объект как отдельный документ, evaluates any <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> specified with
+                                    the form <code>%(external_id)s</code>.
+                                    <code>%%</code> can be used to output actual <em>%</em> signs.</dd><dt><code >file</code></dt>
+                                <dd>ensures that the field content is a valid file path in the current model, saves the pair <code class="samp"><em >module</em>,<em >path</em></code> as the field value</dd><dt><code >char</code></dt>
+                                <dd>sets the field content directly as the field's value without alterations
+                                </dd><dt><code >base64</code></dt>
+                                <dd><a href="http://tools.ietf.org/html/rfc3548.html#section-3" class="external reference">base64</a>-encodes the field's content, useful combined with the <code>file</code>
+                                    <em>attribute</em> to load e.g. image data into attachments</dd><dt><code >int</code></dt>
+                                <dd>converts the field's content to an integer and sets it as the field's value
+                                </dd><dt><code >float</code></dt>
+                                <dd>converts the field's content to a float and sets it as the field's value
+                                </dd><dt><code >list</code>, <code >tuple</code></dt>
+                                <dd>should contain any number of <code>value</code> elements with the same properties as <code>field</code>, each element resolves to an item of a generated tuple or list, and the generated collection is set as the field's
+                                    value</dd>
+                            </dl>
+                        </dd><dt><code >eval</code></dt>
+                        <dd>
+                            <p>for cases where the previous methods are unsuitable, the <code>eval</code> attributes simply evaluates whatever Python expression it is provided and sets the result as the field's value.</p>
+                            <p>The evaluation context contains various modules (<code>time</code>, <code>datetime</code>,
+                                <code>timedelta</code>, <code>relativedelta</code>), a function to resolve <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external
+identifiers</span></a> (<code>ref</code>) and the model object for the current field if applicable (<code>obj</code>)</p>
+                        </dd>
+                    </dl>
+                </section>
+                <section id="delete">
+                    <h3><code >delete</code></h3>
+                    <p>The <code>delete</code> tag can remove any number of records previously defined. It has the following attributes:</p>
+                    <dl><dt><code >model</code> (required)</dt>
+                        <dd>the model in which a specified record should be deleted</dd><dt><code >id</code></dt>
+                        <dd>the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of a record to remove</dd><dt><code >search</code></dt>
+                        <dd>a <a href="orm.html#reference-orm-domains" class="internal reference"><span >domain</span></a> to find records of the model to remove
+                        </dd>
+                    </dl>
+                    <p><code>id</code> and <code>search</code> are exclusive</p>
+                </section>
+                <section id="function">
+                    <h3><code >function</code></h3>
+                    <p>The <code>function</code> tag calls a method on a model, with provided parameters. It has two mandatory parameters <code>model</code> and <code>name</code> specifying respectively the model and the name of the method to call.</p>
+                    <p>Parameters can be provided using <code>eval</code> (should evaluate to a sequence of parameters to call the method with) or <code>value</code> elements (see <code>list</code> values).
+                    </p>
+                </section>
+                <section id="workflow">
+                    <h3><code >workflow</code></h3>
+                    <p>The <code>workflow</code> tag sends a signal to an existing workflow. The workflow can be specified via a <code>ref</code> attribute (the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a>                        of an existing workflow) or a <code>value</code> tag returning the id of a workflow.</p>
+                    <p>The tag also has two mandatory attributes <code>model</code> (the model linked to the workflow) and <code>action</code> (the name of the signal to send to the workflow).</p>
+                </section>
+                <section id="shortcuts">
+                    <h2>Shortcuts</h2>
+                    <p>Because some important structural models of Odoo are complex and involved, data files provide shorter alternatives to defining them using
+                        <a href="#reference-data-record" class="internal reference"><span >record tags</span></a>:</p>
+                </section>
+                <section id="menuitem">
+                    <h3><code >menuitem</code></h3>
+                    <p>Defines an <code>ir.ui.menu</code> record with a number of defaults and fallbacks:</p>
+                    <dl><dt>Parent menu</dt>
+                        <dd>
+                            <ul>
+                                <li>If a <code>parent</code> attribute is set, it should be the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of an other menu item, used as the
+                                    new item's parent</li>
+                                <li>If no <code>parent</code> is provided, tries to interpret the <code>name</code> attribute as a <code>/</code>-separated sequence of menu names and find a place in the menu hierarchy. In that interpretation, intermediate
+                                    menus are automatically created
+                                </li>
+                                <li>Otherwise the menu is defined as a &quot;top-level&quot; menu item (<em>not</em> a menu with no parent)</li>
+                            </ul>
+                        </dd><dt>Menu name</dt>
+                        <dd>If no <code>name</code> attribute is specified, tries to get the menu name from a linked action if any. Otherwise uses the record's <code>id</code></dd><dt>Groups</dt>
+                        <dd>A <code>groups</code> attribute is interpreted as a comma-separated sequence of
+                            <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a> for <code>res.groups</code> models. If an
+                            <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a> is prefixed with a minus (<code>-</code>), the group is <em>removed</em> from the
+                            menu's groups</dd><dt><code >action</code></dt>
+                        <dd>if specified, the <code>action</code> attribute should be the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of an action to execute when the menu is
+                            open</dd><dt><code >id</code></dt>
+                        <dd>the menu item's <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a></dd>
+                    </dl>
+                </section>
+                <section id="template"><i id="reference-data-template"></i>
+                    <h3><code >template</code></h3>
+                    <p>Creates a <a href="views.html#reference-views-qweb" class="internal reference"><span >QWeb view</span></a> requiring only the <code>arch</code> section of the view, and allowing a few <em>optional</em> attributes:</p>
+                    <dl><dt><code >id</code></dt>
+                        <dd>the view's <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a></dd><dt><code >name</code>, <code >inherit_id</code>, <code >priority</code></dt>
+                        <dd>same as the corresponding field on <code>ir.ui.view</code> (nb: <code>inherit_id</code> should be an <a href="../glossary.html#term-external-identifier" class="internal reference"><span class="std std-term xref">external identifier</span></a>)</dd><dt><code >primary</code></dt>
+                        <dd>if set to <code>True</code> and combined with a <code>inherit_id</code>, defines the view as a primary</dd><dt><code >groups</code></dt>
+                        <dd>comma-separated list of group <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a></dd><dt><code >page</code></dt>
+                        <dd>if set to <code>&quot;True&quot;</code>, the template is a website page (linkable to, deletable)
+                        </dd><dt><code >optional</code></dt>
+                        <dd><code>enabled</code> or <code>disabled</code>, whether the view can be disabled (in the website interface) and its default status. If unset, the view is always enabled.
+                        </dd>
+                    </dl>
+                </section>
+                <section id="report">
+                    <h3><code >report</code></h3>
+                    <p>Creates a <code>ir.actions.report.xml</code> record with a few default values.</p>
+                    <p>Mostly just proxies attributes to the corresponding fields on
+                        <code>ir.actions.report.xml</code>, but also automatically creates the item in the
+                        <span class="guilabel">More</span> menu of the report's <code>model</code>.</p>
+                </section>
+                <section id="csv-data-files">
+                    <h2>CSV data files</h2>
+                    <p>XML data files are flexible and self-descriptive, but very verbose when creating a number of simple records of the same model in bulk.</p>
+                    <p>For this case, data files can also use <a href="http://en.wikipedia.org/wiki/Comma-separated_values" class="external reference">csv</a>, this is often the case for
+                        <a href="security.html#reference-security-acl" class="internal reference"><span >access rights</span></a>:</p>
+                    <ul>
+                        <li>the file name is <code class="file"><em >model_name</em>.csv</code></li>
+                        <li>the first row lists the fields to write, with the special field <code>id</code> for <a href="../glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">external identifiers</span></a>                            (used for creation or update)</li>
+                        <li>each row thereafter creates a new record</li>
+                    </ul>
+                    <p>Here's the first lines of the data file defining US states
+                        <code>res.country.state.csv</code></p>
+                    <div class="highlight-text">
+                        <div class="highlight"><pre>&quot;id&quot;,&quot;country_id:id&quot;,&quot;name&quot;,&quot;code&quot;
+state_au_1,au,&quot;Australian Capital Territory&quot;,&quot;ACT&quot;
+state_au_2,au,&quot;New South Wales&quot;,&quot;NSW&quot;
+state_au_3,au,&quot;Northern Territory&quot;,&quot;NT&quot;
+state_au_4,au,&quot;Queensland&quot;,&quot;QLD&quot;
+state_au_5,au,&quot;South Australia&quot;,&quot;SA&quot;
+state_au_6,au,&quot;Tasmania&quot;,&quot;TAS&quot;
+state_au_7,au,&quot;Victoria&quot;,&quot;VIC&quot;
+state_au_8,au,&quot;Western Australia&quot;,&quot;WA&quot;
+state_us_1,us,&quot;Alabama&quot;,&quot;AL&quot;
+state_us_2,us,&quot;Alaska&quot;,&quot;AK&quot;
+state_us_3,us,&quot;Arizona&quot;,&quot;AZ&quot;
+state_us_4,us,&quot;Arkansas&quot;,&quot;AR&quot;
+state_us_5,us,&quot;California&quot;,&quot;CA&quot;
+state_us_6,us,&quot;Colorado&quot;,&quot;CO&quot;
+</pre></div>
+                    </div>
+                    <p>rendered in a more readable format:</p>
+                    <table class="table table-hover table-striped table-condensed">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>country_id:id</th>
+                                <th>name</th>
+                                <th>code</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>state_au_1</td>
+                                <td>au</td>
+                                <td>Australian Capital Territory</td>
+                                <td>ACT</td>
+                            </tr>
+                            <tr>
+                                <td>state_au_2</td>
+                                <td>au</td>
+                                <td>New South Wales</td>
+                                <td>NSW</td>
+                            </tr>
+                            <tr>
+                                <td>state_au_3</td>
+                                <td>au</td>
+                                <td>Northern Territory</td>
+                                <td>NT</td>
+                            </tr>
+                            <tr>
+                                <td>state_au_4</td>
+                                <td>au</td>
+                                <td>Queensland</td>
+                                <td>QLD</td>
+                            </tr>
+                            <tr>
+                                <td>state_au_5</td>
+                                <td>au</td>
+                                <td>South Australia</td>
+                                <td>SA</td>
+                            </tr>
+                            <tr>
+                                <td>state_au_6</td>
+                                <td>au</td>
+                                <td>Tasmania</td>
+                                <td>TAS</td>
+                            </tr>
+                            <tr>
+                                <td>state_au_7</td>
+                                <td>au</td>
+                                <td>Victoria</td>
+                                <td>VIC</td>
+                            </tr>
+                            <tr>
+                                <td>state_au_8</td>
+                                <td>au</td>
+                                <td>Western Australia</td>
+                                <td>WA</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_1</td>
+                                <td>us</td>
+                                <td>Alabama</td>
+                                <td>AL</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_2</td>
+                                <td>us</td>
+                                <td>Alaska</td>
+                                <td>AK</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_3</td>
+                                <td>us</td>
+                                <td>Arizona</td>
+                                <td>AZ</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_4</td>
+                                <td>us</td>
+                                <td>Arkansas</td>
+                                <td>AR</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_5</td>
+                                <td>us</td>
+                                <td>California</td>
+                                <td>CA</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_6</td>
+                                <td>us</td>
+                                <td>Colorado</td>
+                                <td>CO</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_7</td>
+                                <td>us</td>
+                                <td>Connecticut</td>
+                                <td>CT</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_8</td>
+                                <td>us</td>
+                                <td>Delaware</td>
+                                <td>DE</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_9</td>
+                                <td>us</td>
+                                <td>District of Columbia</td>
+                                <td>DC</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_10</td>
+                                <td>us</td>
+                                <td>Florida</td>
+                                <td>FL</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_11</td>
+                                <td>us</td>
+                                <td>Georgia</td>
+                                <td>GA</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_12</td>
+                                <td>us</td>
+                                <td>Hawaii</td>
+                                <td>HI</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_13</td>
+                                <td>us</td>
+                                <td>Idaho</td>
+                                <td>ID</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_14</td>
+                                <td>us</td>
+                                <td>Illinois</td>
+                                <td>IL</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_15</td>
+                                <td>us</td>
+                                <td>Indiana</td>
+                                <td>IN</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_16</td>
+                                <td>us</td>
+                                <td>Iowa</td>
+                                <td>IA</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_17</td>
+                                <td>us</td>
+                                <td>Kansas</td>
+                                <td>KS</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_18</td>
+                                <td>us</td>
+                                <td>Kentucky</td>
+                                <td>KY</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_19</td>
+                                <td>us</td>
+                                <td>Louisiana</td>
+                                <td>LA</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_20</td>
+                                <td>us</td>
+                                <td>Maine</td>
+                                <td>ME</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_21</td>
+                                <td>us</td>
+                                <td>Montana</td>
+                                <td>MT</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_22</td>
+                                <td>us</td>
+                                <td>Nebraska</td>
+                                <td>NE</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_23</td>
+                                <td>us</td>
+                                <td>Nevada</td>
+                                <td>NV</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_24</td>
+                                <td>us</td>
+                                <td>New Hampshire</td>
+                                <td>NH</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_25</td>
+                                <td>us</td>
+                                <td>New Jersey</td>
+                                <td>NJ</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_26</td>
+                                <td>us</td>
+                                <td>New Mexico</td>
+                                <td>NM</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_27</td>
+                                <td>us</td>
+                                <td>New York</td>
+                                <td>NY</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_28</td>
+                                <td>us</td>
+                                <td>North Carolina</td>
+                                <td>NC</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_29</td>
+                                <td>us</td>
+                                <td>North Dakota</td>
+                                <td>ND</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_30</td>
+                                <td>us</td>
+                                <td>Ohio</td>
+                                <td>OH</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_31</td>
+                                <td>us</td>
+                                <td>Oklahoma</td>
+                                <td>OK</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_32</td>
+                                <td>us</td>
+                                <td>Oregon</td>
+                                <td>OR</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_33</td>
+                                <td>us</td>
+                                <td>Maryland</td>
+                                <td>MD</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_34</td>
+                                <td>us</td>
+                                <td>Massachusetts</td>
+                                <td>MA</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_35</td>
+                                <td>us</td>
+                                <td>Michigan</td>
+                                <td>MI</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_36</td>
+                                <td>us</td>
+                                <td>Minnesota</td>
+                                <td>MN</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_37</td>
+                                <td>us</td>
+                                <td>Mississippi</td>
+                                <td>MS</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_38</td>
+                                <td>us</td>
+                                <td>Missouri</td>
+                                <td>MO</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_39</td>
+                                <td>us</td>
+                                <td>Pennsylvania</td>
+                                <td>PA</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_40</td>
+                                <td>us</td>
+                                <td>Rhode Island</td>
+                                <td>RI</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_41</td>
+                                <td>us</td>
+                                <td>South Carolina</td>
+                                <td>SC</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_42</td>
+                                <td>us</td>
+                                <td>South Dakota</td>
+                                <td>SD</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_43</td>
+                                <td>us</td>
+                                <td>Tennessee</td>
+                                <td>TN</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_44</td>
+                                <td>us</td>
+                                <td>Texas</td>
+                                <td>TX</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_45</td>
+                                <td>us</td>
+                                <td>Utah</td>
+                                <td>UT</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_46</td>
+                                <td>us</td>
+                                <td>Vermont</td>
+                                <td>VT</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_47</td>
+                                <td>us</td>
+                                <td>Virginia</td>
+                                <td>VA</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_48</td>
+                                <td>us</td>
+                                <td>Washington</td>
+                                <td>WA</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_49</td>
+                                <td>us</td>
+                                <td>West Virginia</td>
+                                <td>WV</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_50</td>
+                                <td>us</td>
+                                <td>Wisconsin</td>
+                                <td>WI</td>
+                            </tr>
+                            <tr>
+                                <td>state_us_51</td>
+                                <td>us</td>
+                                <td>Wyoming</td>
+                                <td>WY</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>For each row (record):</p>
+                    <ul>
+                        <li>the first column is the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of the record to create or update
+                        </li>
+                        <li>the second column is the <a href="../glossary.html#term-external-id" class="internal reference"><span class="std std-term xref">external id</span></a> of the country object to link to (country objects must have been defined beforehand)</li>
+                        <li>the third column is the <code>name</code> field for <code>res.country.state</code></li>
+                        <li>the fourth column is the <code>code</code> field for <code>res.country.state</code></li>
+                    </ul>
+                </section>
+
+            </article>
+        </div>
+
+        <div id="mask"></div>
+    </main>
+
+    <div class="floating_action_container">
+        <a id="floating_action" class="ripple" href="#">
+            <i class="mdi-action-explore"></i>
+        </a>
+        <div id="floating_action_menu">
+            <span class="bubble"></span>
+            <ul class="list-group content">
+                <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+                <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+                <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+                <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+                <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

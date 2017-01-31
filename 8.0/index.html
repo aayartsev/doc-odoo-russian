@@ -1,0 +1,393 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Главная &mdash; перевод на русский язык документации odoo 8.0</title>
+
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/patchqueue.css" type="text/css" />
+
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/patchqueue.js"></script>
+    <script type="text/javascript" src="_static/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap.js"></script>
+    <script type="text/javascript" src="_static/doc.js"></script>
+    <script type="text/javascript" src="_static/jquery.noconflict.js"></script>
+    <link rel="top" title="odoo 8.0 documentation" href="#" />
+    <link rel="next" title="Tutorials" href="tutorials.html" />
+</head>
+
+<body role="document">
+    <header class="index">
+        <figure class="card top">
+            <span class="card-img" style="background-image: url('_static/banners/index.jpg');"></span>
+        </figure>
+    </header>
+    <nav id="main_navbar" class="navbar index">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+                    <span class="sr-only">Навигация</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <nav class="nav navbar-nav navbar-left">
+                    <li id="main-back">
+                        <a href="#" class="mdi-navigation-arrow-back"></a>
+                    </li>
+                    <li>
+                        <h1 id="main_title">doc</h1>
+                    </li>
+                </nav>
+            </div>
+
+            <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+
+                <ul class="navbar-nav navbar-right nav">
+                    <li class="versions">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                8.0 <span class="caret"></span>
+              </a>
+                        <ul class="dropdown-menu" role="menu">
+
+                            <li><a href="https://www.odoo.com/documentation/9.0/">9.0</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="current navbar-nav navbar-right nav">
+                  <li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../tutorials.html" class="dropdown-toggle internal reference">Руководства</a>
+                    <ul class="current dropdown-menu">
+                      <li class="toctree-l2"><a href="./howtos/themes.html" class="internal reference">Как создать свою тему</a></li>
+                      <li class="toctree-l2"><a href="./howtos/website.html" class="internal reference">Создание вебсайта</a></li>
+                      <li class="toctree-l2"><a href="./howtos/backend.html" class="current internal reference">Создание модуля</a></li>
+                      <li class="toctree-l2"><a href="./howtos/web.html" class="internal reference">Создание расширений для интерфейса</a></li>
+                    </ul>
+                  </li>
+                  <li class="toctree-l1"><a href="./api_integration.html" class="internal reference">Web Service API</a>
+                    <ul></ul>
+                  </li>
+                  <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../setup.html" class="dropdown-toggle internal reference">Настройка</a>
+                    <ul class="dropdown-menu">
+                      <li class="toctree-l2"><a href="../setup/install.html" class="internal reference">Установка Odoo</a></li>
+                      <li class="toctree-l2"><a href="../setup/deploy.html" class="internal reference">Развертывание Odoo</a></li>
+                    </ul>
+                  </li>
+                  <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../reference.html" class="dropdown-toggle internal reference">Справка</a>
+                    <ul class="dropdown-menu">
+                      <li class="toctree-l2"><a href="./reference/orm.html" class="internal reference">ORM API</a></li>
+                      <li class="toctree-l2"><a href="./reference/data.html" class="internal reference">Файлы с данными</a></li>
+                      <li class="toctree-l2"><a href="./reference/actions.html" class="internal reference">Действия</a></li>
+                      <li class="toctree-l2"><a href="./reference/views.html" class="internal reference">Представления</a></li>
+                      <li class="toctree-l2"><a href="./reference/module.html" class="internal reference">Модули</a></li>
+                      <li class="toctree-l2"><a href="./reference/cmdline.html" class="internal reference">Интерфейс коммандной строки: odoo.py</a></li>
+                      <li class="toctree-l2"><a href="./reference/security.html" class="internal reference">Безопасность в Odoo</a></li>
+                      <li class="toctree-l2"><a href="./reference/testing.html" class="internal reference">Тестирование модулей</a></li>
+                      <li class="toctree-l2"><a href="./reference/http.html" class="internal reference">Web Controllers</a></li>
+                      <li class="toctree-l2"><a href="./reference/qweb.html" class="internal reference">QWeb</a></li>
+                      <li class="toctree-l2"><a href="./reference/javascript.html" class="internal reference">Javascript</a></li>
+                      <li class="toctree-l2"><a href="./reference/translations.html" class="internal reference">Перевод Модулей</li>
+                      <li class="toctree-l2"><a href="./reference/reports.html" class="internal reference">Печатные формы(Отчеты) на QWeb</a></li>
+                      <li class="toctree-l2"><a href="./reference/workflows.html" class="internal reference">Бизнес-процессы</a></li>
+                      <li class="toctree-l2"><a href="./reference/guidelines.html" class="internal reference">Методические рекомендации по Odoo</a></li>
+                      <li class="toctree-l2"><a href="./reference/upgrade_api.html" class="internal reference">API для обновления</a></li>
+                    </ul>
+                  </li>
+                  <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../business.html" class="dropdown-toggle internal reference">Business Mementoes</a>
+                    <ul class="dropdown-menu">
+                      <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/accounting.html" class="external reference">Accounting Memento (US GAAP)</a></li>
+                      <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/double-entry.html" class="external reference">Double-Entry Inventory</a></li>
+                      <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/valuation.html" class="external reference">Inventory Valuations</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </nav>
+
+
+    <main class="container index">
+
+
+        <section id="index">
+            <div class="toctree-wrapper index-tree">
+                <div class="tutorials toc-section row">
+                    <h2 class="col-sm-12">Руководства</h2>
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="howtos/themes.html" class="card-img">
+                                <span style="background-image: url('_static/banners/build_a_theme.jpg')"></span>
+                                <figcaption>Создание своей темы</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="howtos/website.html" class="card-img">
+                                <span style="background-image: url('_static/banners/build_a_website.jpg')"></span>
+                                <figcaption>Создание вебсайта</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="howtos/backend.html" class="card-img">
+                                <span style="background-image: url('_static/banners/build_a_module.jpg')"></span>
+                                <figcaption>Создание модуля</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="howtos/web.html" class="card-img">
+                                <span style="background-image: url('_static/banners/build_interface_ext.jpg')"></span>
+                                <figcaption>Создание расширений к интерфейсу</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="api toc-single-entry row">
+                    <h2 class="col-sm-12">Web Service API</h2>
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="api_integration.html" class="card-img">
+                                <span style="background-image: url('_static/banners/web_service_api.jpg')"></span>
+                                <figcaption>Web Service API</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="toc-section setting_up row">
+                    <h2 class="col-sm-12">Настройка</h2>
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="setup/install.html" class="card-img">
+                                <span style="background-image: url('_static/banners/installing_odoo.jpg')"></span>
+                                <figcaption>Установка Odoo</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="setup/deploy.html" class="card-img">
+                                <span style="background-image: url('_static/banners/deploying_odoo.jpg')"></span>
+                                <figcaption>Развертывание Odoo</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="tutorials toc-section row">
+                    <h2 class="col-sm-12">Справка</h2>
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/orm.html" class="card-img">
+                                <span style="background-image: url('_static/banners/orm_api.jpg')"></span>
+                                <figcaption>ORM API</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/data.html" class="card-img">
+                                <span style="background-image: url('_static/banners/data_files.jpg')"></span>
+                                <figcaption>Файлы с данными</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/actions.html" class="card-img">
+                                <span style="background-image: url('_static/banners/actions.jpg')"></span>
+                                <figcaption>Действия</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/views.html" class="card-img">
+                                <span style="background-image: url('_static/banners/views.jpg')"></span>
+                                <figcaption>Представления</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/module.html" class="card-img">
+                                <span style="background-image: url('_static/banners/module.jpg')"></span>
+                                <figcaption>Модули</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/cmdline.html" class="card-img">
+                                <span style="background-image: url('_static/banners/cmdline.jpg')"></span>
+                                <figcaption>Интерфейс коммандной строки: odoo.py</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/security.html" class="card-img">
+                                <span style="background-image: url('_static/banners/security.jpg')"></span>
+                                <figcaption>Безопасность в Odoo</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/testing.html" class="card-img">
+                                <span style="background-image: url('_static/banners/testing_modules.jpg')"></span>
+                                <figcaption>Тестирование модулей</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/http.html" class="card-img">
+                                <span style="background-image: url('_static/banners/web_controllers.jpg')"></span>
+                                <figcaption>Web Controllers</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/qweb.html" class="card-img">
+                                <span style="background-image: url('_static/banners/qweb.jpg')"></span>
+                                <figcaption>QWeb</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/javascript.html" class="card-img">
+                                <span style="background-image: url('_static/banners/javascript.jpg')"></span>
+                                <figcaption>Javascript</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/translations.html" class="card-img">
+                                <span style="background-image: url('_static/banners/translate.jpg')"></span>
+                                <figcaption>Перевод модулей</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/reports.html" class="card-img">
+                                <span style="background-image: url('_static/banners/reports.jpg')"></span>
+                                <figcaption>Печатные формы(отчеты) на QWeb</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/workflows.html" class="card-img">
+                                <span style="background-image: url('_static/banners/installing_odoo.jpg')"></span>
+                                <figcaption>Бизнес процессы</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/guidelines.html" class="card-img">
+                                <span style="background-image: url('_static/banners/odoo_guideline.jpg')"></span>
+                                <figcaption>Методические рекомендации по Odoo</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="reference/upgrade_api.html" class="card-img">
+                                <span style="background-image: url('_static/banners/upgrade_api.jpg')"></span>
+                                <figcaption>API для обновления</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="tutorials toc-section row">
+                    <h2 class="col-sm-12">Business Mementoes</h2>
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="https://odoo.com/documentation/functional/accounting.html" class="card-img">
+                                <span style="background-image: url('_static/banners/m_accounting.jpg')"></span>
+                                <figcaption>Accounting Memento (US GAAP)</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="https://odoo.com/documentation/functional/double-entry.html" class="card-img">
+                                <span style="background-image: url('_static/banners/m_1.jpg')"></span>
+                                <figcaption>Double-Entry Inventory</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="card">
+                            <a href="https://odoo.com/documentation/functional/valuation.html" class="card-img">
+                                <span style="background-image: url('_static/banners/m_2.jpg')"></span>
+                                <figcaption>Inventory Valuations</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div id="mask"></div>
+    </main>
+
+    <div class="floating_action_container">
+        <a id="floating_action" class="ripple" href="#">
+            <i class="mdi-action-explore"></i>
+        </a>
+        <div id="floating_action_menu">
+            <span class="bubble"></span>
+            <ul class="list-group content">
+                <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+                <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+                <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+                <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+                <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

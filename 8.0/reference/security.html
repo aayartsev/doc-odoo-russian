@@ -1,0 +1,230 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Безопасность в Odoo &mdash; перевод на русский язык документации odoo 8.0</title>
+
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/patchqueue.css" type="text/css" />
+
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/patchqueue.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="перевод на русский язык документации odoo 8.0" href="../index.html" />
+    <link rel="up" title="Reference" href="../reference.html" />
+    <link rel="next" title="Testing Modules" href="./testing.html" />
+    <link rel="prev" title="Command-line interface: odoo.py" href="./cmdline.html" />
+</head>
+
+<body role="document">
+    <header class="">
+        <figure class="card top">
+            <span class="card-img" style="background-image: url('./_static/banners/security.jpg');"></span>
+        </figure>
+    </header>
+    <nav id="main_navbar" class="navbar ">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+                    <span class="sr-only">Навигация</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <nav class="nav navbar-nav navbar-left">
+                    <li id="main-back">
+                        <a href="./index.html" class="mdi-navigation-arrow-back"></a>
+                    </li>
+                    <li>
+                        <h1 id="main_title">Безопасность в Odoo</h1>
+                    </li>
+                </nav>
+            </div>
+
+            <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+
+                <ul class="navbar-nav navbar-right nav">
+                    <li class="versions">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                8.0 <span class="caret"></span>
+              </a>
+                        <ul class="dropdown-menu" role="menu">
+
+                            <li><a href="https://www.odoo.com/documentation/9.0/reference/security.html">9.0</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="current navbar-nav navbar-right nav">
+                    <li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="./tutorials.html" class="dropdown-toggle internal reference">Руководства</a>
+                        <ul class="current dropdown-menu">
+                            <li class="toctree-l2"><a href="../howtos/themes.html" class="internal reference">Создание своей темы</a></li>
+                            <li class="toctree-l2"><a href="../howtos/website.html" class="internal reference">Создание вебсайта</a></li>
+                            <li class="toctree-l2"><a href="../howtos/backend.html" class="current internal reference">Создание модуля</a></li>
+                            <li class="toctree-l2"><a href="../howtos/web.html" class="internal reference">Создание расширений для интерфейса</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a href="../api_integration.html" class="internal reference">Web Service API</a>
+                        <ul></ul>
+                    </li>
+                    <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../setup.html" class="dropdown-toggle internal reference">Настройка</a>
+                        <ul class="dropdown-menu">
+                            <li class="toctree-l2"><a href="../setup/install.html" class="internal reference">Установка Odoo</a></li>
+                            <li class="toctree-l2"><a href="../setup/deploy.html" class="internal reference">Развертывание Odoo</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="./reference.html" class="dropdown-toggle internal reference">Справка</a>
+                        <ul class="dropdown-menu">
+                            <li class="toctree-l2"><a href="../reference/orm.html" class="internal reference">ORM API</a></li>
+                            <li class="toctree-l2"><a href="../reference/data.html" class="internal reference">Файлы с данными</a></li>
+                            <li class="toctree-l2"><a href="../reference/actions.html" class="internal reference">Действия</a></li>
+                            <li class="toctree-l2"><a href="../reference/views.html" class="internal reference">Представления</a></li>
+                            <li class="toctree-l2"><a href="../reference/module.html" class="internal reference">Модули</a></li>
+                            <li class="toctree-l2"><a href="../reference/cmdline.html" class="internal reference">Интерфейс коммандной строки: odoo.py</a></li>
+                            <li class="toctree-l2"><a href="" class="internal reference">Безопасность в Odoo</a></li>
+                            <li class="toctree-l2"><a href="../reference/testing.html" class="internal reference">Тестирование модулей</a></li>
+                            <li class="toctree-l2"><a href="../reference/http.html" class="internal reference">Web Controllers</a></li>
+                            <li class="toctree-l2"><a href="../reference/qweb.html" class="internal reference">QWeb</a></li>
+                            <li class="toctree-l2"><a href="../reference/javascript.html" class="internal reference">Javascript</a></li>
+                            <li class="toctree-l2"><a href="../reference/translations.html" class="internal reference">Перевод Модулей</li>
+                      <li class="toctree-l2"><a href="../reference/reports.html" class="internal reference">Печатные формы(Отчеты) на QWeb</a></li>
+                            <li class="toctree-l2"><a href="../reference/workflows.html" class="internal reference">Бизнес-процессы</a></li>
+                            <li class="toctree-l2"><a href="../reference/guidelines.html" class="internal reference">Методические рекомендации по Odoo</a></li>
+                            <li class="toctree-l2"><a href="../reference/upgrade_api.html" class="internal reference">API для обновления</a></li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="./business.html" class="dropdown-toggle internal reference">Business Mementoes</a>
+                        <ul class="dropdown-menu">
+                            <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/accounting.html" class="external reference">Accounting Memento (US GAAP)</a></li>
+                            <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/double-entry.html" class="external reference">Double-Entry Inventory</a></li>
+                            <li class="toctree-l2"><a href="https://odoo.com/documentation/functional/valuation.html" class="external reference">Inventory Valuations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+
+
+    <main class="container ">
+
+        <div class="row">
+
+            <aside>
+                <div class="navbar-aside text-center">
+                    <div class="logo_box">
+                        <span class="logo"></span> Документация
+                    </div>
+                    <ul class="list-group text-left nav">
+                        <li class="list-group-item"><a href="#access-control" class="ripple internal reference">Контроль доступа</a></li>
+                        <li class="list-group-item"><a href="#record-rules" class="ripple internal reference">Правила для записей</a></li>
+                        <li class="list-group-item"><a href="#field-access" class="ripple internal reference">Доступ к полям</a></li>
+                        <li class="list-group-item"><a href="#workflow-transition-rules" class="ripple internal reference">Правила перерехода на следующий этап в бизнес-процессе</a></li>
+                    </ul>
+
+                    <p class="gith-container"><a href="https://github.com/odoo/odoo/edit/8.0/doc/reference/security.rst" class="gith-link">
+              Доступно на GitHub
+          </a></p>
+
+                </div>
+            </aside>
+
+            <article class="doc-body ">
+
+
+                <section id="security-in-odoo"><i id="reference-security"></i>
+                    <p>Помимо ручного управления доступом с помощью кода, Odoo предоставляет два основных механизма на основании данных в модуле для управления или ограничения доступа к данным в базе.</p>
+                    <p>Оба механизма связаны с нужными пользователями через <em>группы</em>: пользователь принадлежит какому-то количеству групп, и механизмы безопасности ассоциированы с группами, таким образом эти механизмы применяются к пользователям.</p>
+                </section>
+                <section id="access-control"><i id="reference-security-acl"></i>
+                    <h2>Контроль доступа</h2>
+                    <p>Управляемый записями<code>ir.model.access</code>, определяет доступ ко всей модели данных.</p>
+                    <p>Каждый элемент управления доступом имеет модель данных, к которой предоставляет разрешения, разрешения он предоставляет и опционально группу.</p>
+                    <p>Контроль доступа является аддитивными, для данной модели пользователь имеет доступ ко всем разрешениям, предоставленным любой из его групп: если пользователь принадлежит к одной группе, которая позволяет писать и к другой, которая
+                        позволяет удалять, он может и писать и удалять.</p>
+                    <p>Если не указано ни одной группы, контроль доступа применяется ко всем пользователям, в противном случае это относится только к членам данной группы.</p>
+                    <p>Доступные разрешения это создание (<code>perm_create</code>), поиск и чтение (<code>perm_read</code>), обновление существующих записей (<code>perm_write</code>) и удаление существующих записей (<code>perm_unlink</code>)</p>
+                </section>
+                <section id="record-rules"><i id="reference-security-rules"></i>
+                    <h2>Правила записей</h2>
+                    <p>Запись правил это условие, что записи удовлетворяют разрешенным операциям (создание, чтение, обновление или удаление). Она применяется от записи к записи после того, как будет применен контроль доступа.</p>
+                    <p>Запись правила имеет:</p>
+                    <ul>
+                        <li>модель данных, к которой она применяется</li>
+                        <li>набор разрешений, к которому он относится (например, если <code>perm_read</code> установлен, то правило будет проверяться только при чтении записи)</li>
+                        <li>набор групп пользователей, к которым применяется данное правило, если ни одна из групп не указа, тогда правило становится <em>global</em></li>
+                        <li><a href="orm.html#reference-orm-domains" class="internal reference"><span >domain</span></a> используется для проверки, соотвествует ли данная запись правилу (и доступна) или не соотвествует (и не доступна). Домен оценивается с
+                            двумя переменными в контексте: <code>user</code> принадлежит ли эта запись пользователю и <code>time</code> проверяется <a href="https://docs.python.org/2/library/time.html" class="external reference">доступность по времени</a></li>
+                    </ul>
+                    <p>Глобальные правила и правила для конкретной группы (правила ограничиваются конкретными группами против групп, принадлежащих всем пользователям) используются совершенно по-разному:</p>
+                    <ul>
+                        <li>Глобальные правила являются вычитаемыми, они <em>должны все</em> соотвествовать записи, чтобы получить доступ</li>
+                        <li>Правила для групп являются аддитивными, если <em>хотябы одно</em> из них совпадает (и все глобальные правила совпадают) тогда запись доступна</li>
+                    </ul>
+                    <p>Это означает, что первое <em>правило группы</em> ограничивает доступ, но любое другое
+                        <em>правило группы</em> расширяет его, в то время как <em>глобальные правила</em> могут только ограничивать доступ в дальнейшем (или не иметь эффекта).</p>
+                    <div role="alert" class="aphorism alert-warning alert">
+                        <p class="alert-title">Внимание</p>
+                        <p>Правила записей не применяются к пользователю Administrator</p>
+                        <p>в отличии от правил доступа</p>
+                    </div>
+                </section>
+                <section id="field-access"><i id="reference-security-fields"></i>
+                    <h2>Доступ к полям</h2>
+                    <div class="versionadded">
+                        <p><span class="versionmodified">Доступно с версии 7.0.</span></p>
+                    </div>
+                    <p>ORM <a href="orm.html#openerp.fields.Field" class="internal reference" title="openerp.fields.Field"><code class="py xref py-class">поле</code></a> может иметь атрибут <code>группы</code> предоставляющий список групп (в виде разделенных
+                        запятыми строки
+                        <a href="./glossary.html#term-external-identifiers" class="internal reference"><span class="std std-term xref">внешних идентификаторов</span></a>).</p>
+                    <p>Если текущий пользователь не находится в одной из перечисленных групп, он не будет иметь доступ к полю:</p>
+                    <ul>
+                        <li>ограниченные поля автоматически удаляются из запрошенных представлений</li>
+                        <li>ограниченные поля удаляются из ответов на <a href="orm.html#openerp.models.Model.fields_get" class="internal reference" title="openerp.models.Model.fields_get"><code class="py py-meth xref">fields_get()</code> запросы</a>
+                        </li>
+                        <li>попытки (в явном виде) прочитат или записать в ограниченные поля приводит к ошибке доступа</li>
+                    </ul>
+                </section>
+                <section id="workflow-transition-rules">
+                    <h2>Workflow transition rules</h2>
+                    <p>Переходы между этапами бизнес процесса могут быть ограничены до нескольких групп пользователей. Пользователи вне этих групп не смогут совершить перевод процесса на следующий этап.</p>
+                </section>
+
+            </article>
+        </div>
+
+        <div id="mask"></div>
+    </main>
+
+    <div class="floating_action_container">
+        <a id="floating_action" class="ripple" href="#">
+            <i class="mdi-action-explore"></i>
+        </a>
+        <div id="floating_action_menu">
+            <span class="bubble"></span>
+            <ul class="list-group content">
+                <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+                <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+                <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+                <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+                <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
