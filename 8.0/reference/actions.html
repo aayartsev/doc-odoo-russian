@@ -267,32 +267,30 @@
                 </section>
                 <section id="server-actions-ir-actions-server"><i id="reference-actions-server"></i>
                     <h2>Действия Сервера (<code >ir.actions.server</code>)</h2>
-                    <p>Позволяет запуск сложного серверного кода от любого разрешенного действия. Только два поля имют отношение к клиентам:</p>
+                    <p>Позволяет инициировать запуск сложного серверного кода от любого разрешенного действия. Только два поля имют отношение к клиентам:</p>
                     <dl><dt><code >id</code></dt>
                         <dd>внутренни идентификатор действия сервера для запуска</dd><dt><code >context</code> (опционально)</dt>
                         <dd>данные для контекста, когда запускается действие сервера</dd>
                     </dl>
-                    <p>В записях In-database records are significantly richer and can perform a number of specific or generic actions based on their <code>state</code>. Some fields (and corresponding behaviors) are shared between states:</p>
+                    <p>В записях базы данных используемый функционал действий сервера существенно богаче, и может выполнять конкретные действя или сгенерированные  на основании <code>состояний</code>. Некоторые поля (и соотвествующие модели поведения) рапределяются между состояниями:</p>
                     <dl><dt><code >model_id</code></dt>
-                        <dd>Odoo model linked to the action, made available in
-                            <a href="#reference-actions-server-context" class="internal reference"><span >evaluation contexts</span></a></dd><dt><code >condition</code> (optional)</dt>
-                        <dd>evaluated as Python code using the server action's
-                            <a href="#reference-actions-server-context" class="internal reference"><span >evaluation context</span></a>. If
-                            <code>False</code>, prevents the action from running. Default: <code>True</code></dd>
+                        <dd>Odoo модель данных связанная с действием, делает доступным в <a href="#reference-actions-server-context" class="internal reference"><span >оценку контекстов</span></a></dd>
+                            <dt><code >condition</code> (опционально)</dt>
+                        <dd>оценивается как код Python используя действия сервера по <a href="#reference-actions-server-context" class="internal reference"><span> оценке контекста</span></a>. Если <code>False</code>, предотвращает действие от запуска. По умолчанию: <code>True</code></dd>
                     </dl>
-                    <p>Valid action types (<code>state</code> field) are extensible, the default types are:</p>
+                    <p>Допустимые типы действий (<code>state</code> поля) являются расширяемыми, типы по умолчанию:</p>
                 </section>
                 <section id="code">
                     <h3><code >code</code></h3>
-                    <p>The default and most flexible server action type, executes arbitrary Python code with the action's <a href="#reference-actions-server-context" class="internal reference"><span >evaluation context</span></a>. Only uses one specific
-                        type-specific field:
+                    <p>Стандртоное и наиболее гибкое серверное действие, исполняет произвольный Python код с <a href="#reference-actions-server-context" class="internal reference"><span >оценкой контекста</span></a>. действия
+                        Only uses one specific type-specific field:
                     </p>
                     <dl><dt><code >code</code></dt>
-                        <dd>a piece of Python code to execute when the action is called</dd>
+                        <dd>кусок Python кода, который будет выполнен при вызове действия</dd>
                     </dl>
                     <div class="highlight-xml">
                         <div class="highlight"><pre><span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">&quot;ir.actions.server&quot;</span> <span class="na">id=</span><span class="s">&quot;print_instance&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Res Partner Server Action<span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Д ейстиве сервера в модели данных<span class="nt">&lt;/field&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;model_res_partner&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;code&quot;</span><span class="nt">&gt;</span>
         print self, object
@@ -301,8 +299,8 @@
 </pre></div>
                     </div>
                     <div role="alert" class="alert-info alert">
-                        <p class="alert-title">Note</p>
-                        <p>The code segment can define a variable called <code>action</code>, which will be returned to the client as the next action to execute:</p>
+                        <p class="alert-title">Замечание</p>
+                        <p>Сегмент кода может определить переменную вызываемую <code>действием</code>, которая будет возвращена клиенту как следующее действие для выполнения:</p>
                         <div class="highlight-xml">
                             <div class="highlight"><pre><span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">&quot;ir.actions.server&quot;</span> <span class="na">id=</span><span class="s">&quot;print_instance&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Res Partner Server Action<span class="nt">&lt;/field&gt;</span>
@@ -319,119 +317,137 @@
 <span class="nt">&lt;/record&gt;</span>
 </pre></div>
                         </div>
-                        <p>will ask the client to open a form for the record if it fullfils some condition
-                        </p>
+                        <p>будет просить клиента открыть форму для записи, если она удовлетворяет некоторому условию</p>
                     </div>
-                    <p>This tends to be the only action type created from <a href="data.html#reference-data" class="internal reference"><span >data files</span></a>, other types aside from
-                        <a href="#reference-actions-server-multi" class="internal reference"><span >multi</span></a> are simpler than Python code to define from the UI, but not from <a href="data.html#reference-data" class="internal reference"><span >data files</span></a>.</p>
+                    <p>Это, как правило, единственный тип записи создаваемый из <a href="data.html#reference-data" class="internal reference"><span >файлов данных</span></a>, остальные типы не связаны с <a href="#reference-actions-server-multi" class="internal reference"><span >multi</span></a> и их проще определить из UI в отличии от Python кода , но не из <a href="data.html#reference-data" class="internal reference"><span >файлов данных</span></a>.</p>
                 </section>
                 <section id="object-create"><i id="reference-actions-server-object-create"></i>
                     <h3><code >object_create</code></h3>
-                    <p>Creates a new record, from scratch (via <a href="orm.html#openerp.models.Model.create" class="internal reference" title="openerp.models.Model.create"><code class="py py-meth xref">create()</code></a>) or by copying an existing record
-                        (via <a href="orm.html#openerp.models.Model.copy" class="internal reference" title="openerp.models.Model.copy"><code class="py py-meth xref">copy()</code></a>)</p>
+                    <p>Создает новую запись, полностью новую (с помощью <a href="orm.html#openerp.models.Model.create" class="internal reference" title="openerp.models.Model.create"><code class="py py-meth xref">create()</code></a>) или копируя уже существующую (с помощью <a href="orm.html#openerp.models.Model.copy" class="internal reference" title="openerp.models.Model.copy"><code class="py py-meth xref">copy()</code></a>)</p>
                     <dl><dt><code >use_create</code></dt>
                         <dd>
-                            <p>the creation policy, one of:</p>
+                            <p>политика создания, одна из:</p>
                             <dl><dt><code >new</code></dt>
-                                <dd>creates a record in the model specified by <code>model_id</code></dd><dt><code >new_other</code></dt>
-                                <dd>creates a record in the model specified by <code>crud_model_id</code></dd><dt><code >copy_current</code></dt>
-                                <dd>copies the record on which the action was invoked</dd><dt><code >copy_other</code></dt>
-                                <dd>copies an other record, obtained via <code>ref_object</code></dd>
+                                <dd>создает запись в модели данных определенной <code>model_id</code></dd>
+                                <dt><code >new_other</code></dt>
+                                <dd>создает запись в модели данных определенной <code>crud_model_id</code></dd>
+                                <dt><code >copy_current</code></dt>
+                                <dd>копирует запись из которой было вызвано действие</dd>
+                                <dt><code >copy_other</code></dt>
+                                <dd>копирует другую запись, используя <code>ref_object</code></dd>
                             </dl>
                         </dd><dt><code >fields_lines</code></dt>
                         <dd>
-                            <p>fields to override when creating or copying the record.
-                                <a href="orm.html#openerp.fields.One2many" class="internal reference" title="openerp.fields.One2many"><code class="py xref py-class">One2many</code></a> with the fields:</p>
+                            <p>Поля для переопределения при создании или копировании записи.
+                                <a href="orm.html#openerp.fields.One2many" class="internal reference" title="openerp.fields.One2many"><code class="py xref py-class">One2many</code></a> с полями:</p>
                             <dl><dt><code >col1</code></dt>
-                                <dd><code>ir.model.fields</code> to set in the model implied by <code>use_create</code></dd><dt><code >value</code></dt>
-                                <dd>value for the field, interpreted via <code>type</code></dd><dt><code >type</code></dt>
-                                <dd>If <code>value</code>, the <code>value</code> field is interpreted as a literal value (possibly converted), if <code>equation</code> the <code>value</code> field is interpreted as a Python expression and evaluated</dd>
+                                <dd><code>ir.model.fields</code> установить в модели данных подразумеваемой <code>use_create</code></dd>
+                                <dt><code >value</code></dt>
+                                <dd>значение для поля интерпретируемое через <code>type</code></dd>
+                                <dt><code >type</code></dt>
+                                <dd>Если <code>value</code>, то <code>значение</code> поля интерпретируется как буквенное значение (возможно преобразованное), если <code>equation</code>, то <code>значение</code> поля интерпретируется как Python выражение и проходит соотвествующую оценку</dd>
                             </dl>
                         </dd><dt><code >crud_model_id</code></dt>
-                        <dd>model in which to create a new record, if <code>use_create</code> is set to
-                            <code>new_other</code></dd><dt><code >ref_object</code></dt>
-                        <dd><a href="orm.html#openerp.fields.Reference" class="internal reference" title="openerp.fields.Reference"><code class="py xref py-class">Reference</code></a> to an arbitrary record to copy, used if
-                            <code>use_create</code> is set to <code>copy_other</code></dd><dt><code >link_new_record</code></dt>
-                        <dd>boolean flag linking the newly created record to the current one via a many2one field specified through <code>link_field_id</code>, defaults to <code>False</code></dd><dt><code >link_field_id</code></dt>
-                        <dd>many2one to <code>ir.model.fields</code>, specifies the current record's m2o field on which the newly created record should be set (models should match)</dd>
+                        <dd>модель данных в которой будет создана новая запись, если <code>use_create</code> установлено как <code>new_other</code></dd>
+                        <dt><code >ref_object</code></dt>
+                        <dd><a href="orm.html#openerp.fields.Reference" class="internal reference" title="openerp.fields.Reference"><code class="py xref py-class">Ссылка</code></a> на произвольную запись для копирования, используется если <code>use_create</code> установлено как <code>copy_other</code></dd>
+                        <dt><code >link_new_record</code></dt>
+                        <dd>логическйи флаг связывающий новую запись с текущей через many2one поле определенное через <code>link_field_id</code>, по умолчанию <code>False</code></dd>
+                        <dt><code >link_field_id</code></dt>
+                        <dd>many2one в <code>ir.model.fields</code>, определяет m2o поле текущей записи к которому будут установлены вновь создаваемые записи (модели данных должны совпадать)</dd>
                     </dl>
                 </section>
                 <section id="object-write">
                     <h3><code >object_write</code></h3>
-                    <p>Similar to <a href="#reference-actions-server-object-create" class="internal reference"><span >object_create</span></a> but alters an existing records instead of creating one</p>
+                    <p>То же что и <a href="#reference-actions-server-object-create" class="internal reference"><span >object_create</span></a> но изменяет уже существующие записи, вместо создания новых</p>
                     <dl><dt><code >use_write</code></dt>
                         <dd>
-                            <p>write policy, one of:</p>
+                            <p>политика записи, одна из:</p>
                             <dl><dt><code >current</code></dt>
-                                <dd>write to the current record</dd><dt><code >other</code></dt>
-                                <dd>write to an other record selected via <code>crud_model_id</code> and
-                                    <code>ref_object</code></dd><dt><code >expression</code></dt>
-                                <dd>write to an other record whose model is selected via <code>crud_model_id</code> and whose id is selected by evaluating <code>write_expression</code></dd>
+                                <dd>записывает текущую запись</dd>
+                                <dt><code >other</code></dt>
+                                <dd>вносит изменения в другую запись, выбранную через <code>crud_model_id</code> и <code>ref_object</code></dd>
+                                <dt><code >expression</code></dt>
+                                <dd>вносит изменения  в другую запись чья модель данных выбране через <code>crud_model_id</code> и чей идентификатор выбран путем оценки <code>write_expression</code></dd>
                             </dl>
                         </dd><dt><code >write_expression</code></dt>
-                        <dd>Python expression returning a record or an object id, used when
-                            <code>use_write</code> is set to <code>expression</code> in order to decide which record should be modified</dd><dt><code >fields_lines</code></dt>
-                        <dd>see <a href="#reference-actions-server-object-create" class="internal reference"><span >object_create</span></a></dd><dt><code >crud_model_id</code></dt>
-                        <dd>see <a href="#reference-actions-server-object-create" class="internal reference"><span >object_create</span></a></dd><dt><code >ref_object</code></dt>
-                        <dd>see <a href="#reference-actions-server-object-create" class="internal reference"><span >object_create</span></a></dd>
+                        <dd>Python выражение возвращающее идентификатор записи или объекта, используется когда <code>use_write</code> установлено как <code>expression</code>значение для того, чтобы решить какие записи должны быть изменены</dd>
+                        <dt><code >fields_lines</code></dt>
+                        <dd>смотрите <a href="#reference-actions-server-object-create" class="internal reference"><span >object_create</span></a></dd>
+                        <dt><code >crud_model_id</code></dt>
+                        <dd>смотрите <a href="#reference-actions-server-object-create" class="internal reference"><span >object_create</span></a></dd>
+                        <dt><code >ref_object</code></dt>
+                        <dd>смотрите <a href="#reference-actions-server-object-create" class="internal reference"><span >object_create</span></a></dd>
                     </dl>
                 </section>
                 <section id="multi"><i id="reference-actions-server-multi"></i>
                     <h3><code >multi</code></h3>
-                    <p>Executes multiple actions one after the other. Actions to execute are defined via the <code>child_ids</code> m2m. If sub-actions themselves return actions, the last one will be returned to the client as the multi's own next action</p>
+                    <p>Выполняется несколько действий одно за одним. Действия для выполненя определяются через <code>child_ids</code> m2m. Если суб-действия сами возвращают действия, то последнее будет возвращено клиенту как следующие действие всей последовательности(as the multi's own next action)</p>
                 </section>
                 <section id="trigger">
                     <h3><code >trigger</code></h3>
-                    <p>Sends a signal to a workflow.</p>
+                    <p>Подает сигнал бизнес-процессу.</p>
                     <dl><dt><code >wkf_transition_id</code></dt>
-                        <dd><a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a> to a <code>workflow.transition</code> to trigger</dd><dt><code >use_relational_model</code></dt>
-                        <dd>if <code>base</code> (the default), trigger the signal on behalf of the current record. If <code>relational</code>, trigger the signal on behalf of a field of the current record selected through <code>wkf_model_id</code> and <code>wkf_field_id</code></dd>
+                        <dd><a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a> для <code>workflow.transition</code> как триггер</dd>
+                        <dt><code >use_relational_model</code></dt>
+                        <dd>если <code>base</code> (по умолчанию), это триггер для вызова сигнала от имени текущей записи. If <code>relational</code>, то это триггер для вызова сигнала от имени поля выбранного через <code>wkf_model_id</code> и <code>wkf_field_id</code></dd>
                     </dl>
                 </section>
                 <section id="client-action">
                     <h3><code >client_action</code></h3>
-                    <p>Indirection for directly returning an other action defined using
-                        <code>action_id</code>. Simply returns that action to the client for execution.</p>
+                    <p>Косвенность для непосредственно возвращаемого действия определяемого используя <code>action_id</code>. Просто возвращает это действие клиенту для выполнения..</p>
                 </section>
                 <section id="evaluation-context"><i id="reference-actions-server-context"></i>
-                    <h3>Evaluation context</h3>
-                    <p>A number of keys are available in the evaluation context of or surrounding server actions:</p>
+                    <h3>Контекст оценки</h3>
+                    <p>Ряд ключевых слов, доступных в контесте оценки или окружающих действий сервера:</p>
                     <dl><dt><code >self</code></dt>
-                        <dd>the model object linked to the action via <code>model_id</code></dd><dt><code >object</code>, <code >obj</code></dt>
-                        <dd>only available if <code>active_model</code> and <code>active_id</code> are provided (via context) otherwise <code>None</code>. The actual record selected by <code>active_id</code></dd><dt><code >pool</code></dt>
-                        <dd>the current database registry</dd><dt><code >datetime</code>, <code >dateutil</code>, <code >time</code></dt>
-                        <dd>corresponding Python modules</dd><dt><code >cr</code></dt>
-                        <dd>the current cursor</dd><dt><code >user</code></dt>
-                        <dd>the current user record</dd><dt><code >context</code></dt>
-                        <dd>execution context</dd><dt><code >Warning</code></dt>
-                        <dd>constructor for the <code>Warning</code> exception</dd>
+                        <dd>объет модели даннных связан с действие через<code>model_id</code></dd>
+                        <dt><code >object</code>, <code >obj</code></dt>
+                        <dd>доступно только если предоставляются <code>active_model</code> и <code>active_id</code> (через контекст) в противном случае <code>None</code>. Актуальная запись выбирается через <code>active_id</code></dd>
+                        <dt><code >pool</code></dt>
+                        <dd>текущий реестр базы данных</dd>
+                        <dt><code >datetime</code>, <code >dateutil</code>, <code >time</code></dt>
+                        <dd>соответствующие модули Python</dd>
+                        <dt><code >cr</code></dt>
+                        <dd>текущий курсор базы данных</dd>
+                        <dt><code >user</code></dt>
+                        <dd>запись текущего пользователя</dd>
+                        <dt><code >context</code></dt>
+                        <dd>контекст выполнения</dd>
+                        <dt><code >Warning</code></dt>
+                        <dd>конструктор для <code>Warning</code> исключений</dd>
                     </dl>
                 </section>
                 <section id="report-actions-ir-actions-report-xml"><i id="reference-actions-report"></i>
-                    <h2>Report Actions (<code >ir.actions.report.xml</code>)</h2>
-                    <p>Triggers the printing of a report</p>
-                    <dl><dt><code >name</code> (mandatory)</dt>
-                        <dd>only useful as a mnemonic/description of the report when looking for one in a list of some sort</dd><dt><code >model</code> (mandatory)</dt>
-                        <dd>the model your report will be about</dd><dt><code >report_type</code> (mandatory)</dt>
-                        <dd>either <code>qweb-pdf</code> for PDF reports or <code>qweb-html</code> for HTML</dd><dt><code >report_name</code></dt>
-                        <dd>the name of your report (which will be the name of the PDF output)</dd><dt><code >groups_id</code></dt>
-                        <dd><a href="orm.html#openerp.fields.Many2many" class="internal reference" title="openerp.fields.Many2many"><code class="py xref py-class">Many2many</code></a> field to the groups allowed to view/use the current report</dd><dt><code >paperformat_id</code></dt>
-                        <dd><a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a> field to the paper format you wish to use for this report (if not specified,
-                            the company format will be used)</dd><dt><code >attachment_use</code></dt>
+                    <h2>Действия печатных форм (<code >ir.actions.report.xml</code>)</h2>
+                    <p>Подача команды для печати соотвествующих форм</p>
+                    <dl><dt><code >name</code> (обязательно)</dt>
+                        <dd>полезно только как mnemonic/описание печатной формы, при поиске в списке форм</dd>
+                        <dt><code >model</code> (обязательно)</dt>
+                        <dd>модель данных к которой относится ваша печатная форма</dd>
+                        <dt><code >report_type</code> (обязательно)</dt>
+                        <dd>или <code>qweb-pdf</code> для создания PDF файлов печатных форм или <code>qweb-html</code> для генерации HTML страницы с содержимым для печати</dd>
+                        <dt><code >report_name</code></dt>
+                        <dd>имя печатной формы (которое будет присвоено выданному PDF файлу)</dd>
+                        <dt><code >groups_id</code></dt>
+                        <dd><a href="orm.html#openerp.fields.Many2many" class="internal reference" title="openerp.fields.Many2many"><code class="py xref py-class">Many2many</code></a> поле в котором находятся ссылки на группы, которым разрешено просматривать/использовать текущую печатную форму</dd>
+                        <dt><code >paperformat_id</code></dt>
+                        <dd><a href="orm.html#openerp.fields.Many2one" class="internal reference" title="openerp.fields.Many2one"><code class="py xref py-class">Many2one</code></a> поле в котором находятся ссылки на форматы бумаги, которые вы хотите применить в данной печатной форме (если не указан явно, то формат компании будет использован по умолчанию)</dd>
+                        <dt><code >attachment_use</code></dt>
                         <dd>
-                            <p>if set to <code>True</code>, the report is only generated once the first time it is requested, and re-printed from the stored report afterwards instead of being re-generated every time.</p>
-                            <p>Can be used for reports which must only be generated once (e.g. for legal reasons)
-                            </p>
+                            <p>если установлено <code>True</code>, то печатная форма только однажды сгенерируется при первом использовании, и при следущих вызовах будет браться из сохраненной копии.</p>
+                            <p>Может быть использован для создания печатных форм, которые должны генерироваться только один раз (Например, по юридическим причинам)</p>
                         </dd><dt><code >attachment</code></dt>
-                        <dd>python expression that defines the name of the report; the record is accessible as the variable <code>object</code></dd>
+                        <dd>python выражение, которое определеяет имя печатной формы; запись доступна как переменная <code>object</code></dd>
                     </dl>
                 </section>
                 <section id="client-actions-ir-actions-client"><i id="reference-actions-client"></i>
-                    <h2>Client Actions (<code >ir.actions.client</code>)</h2>
-                    <p>Triggers an action implemented entirely in the client.</p>
+                    <h2>Действия клиента (<code >ir.actions.client</code>)</h2>
+                    <p>Подача команды на действие, которое реализуется полностью на стороне клиента.</p>
                     <dl><dt><code >tag</code></dt>
-                        <dd>the client-side identifier of the action, an arbitrary string which the client should know how to react to</dd><dt><code >params</code> (optional)</dt>
-                        <dd>a Python dictionary of additional data to send to the client, alongside the client action tag</dd>
+                        <dd>идентификатор действия на стороне клиента, произвольная строка, о том как действовать получив ее клиент должен уже знать</dd>
+                        <dt><code >params</code> (опционально)</dt>
+                        <dd>словарь Python дополнительных данных для отправки клиенту, наряду с тегом действий клиента</dd>
                     </dl>
                     <div class="highlight-python">
                         <div class="highlight"><pre><span class="p">{</span>
@@ -440,8 +456,8 @@
 <span class="p">}</span>
 </pre></div>
                     </div>
-                    <p>tells the client to start the Point of Sale interface, the server has no idea how the POS interface works.</p>
-                    <div class="footnote" id="notquitem2m"><span class="footnote-label"><a class="footnote-backref" href="#id1">[1]</a></span> technically not an M2M: adds a sequence field and may be composed of just a view type, without a view id.</div>
+                    <p>говорит клиенту запустить интерфейс POS, сервер вообще не вкурсе как он работает.</p>
+                    <div class="footnote" id="notquitem2m"><span class="footnote-label"><a class="footnote-backref" href="#id1">[1]</a></span> технически не M2M: добавляет поле последовательности и может состоять только из типа представления без идентификатора представления.</div>
                 </section>
 
             </article>
