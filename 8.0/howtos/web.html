@@ -101,7 +101,7 @@
                             <li class="toctree-l2"><a href="../reference/qweb.html" class="internal reference">QWeb</a></li>
                             <li class="toctree-l2"><a href="../reference/javascript.html" class="internal reference">Javascript</a></li>
                             <li class="toctree-l2"><a href="../reference/translations.html" class="internal reference">Перевод Модулей</li>
-                      <li class="toctree-l2"><a href="../reference/reports.html" class="internal reference">Печатные формы(Отчеты) на QWeb</a></li>
+                            <li class="toctree-l2"><a href="../reference/reports.html" class="internal reference">Печатные формы(Отчеты) на QWeb</a></li>
                             <li class="toctree-l2"><a href="../reference/workflows.html" class="internal reference">Бизнес-процессы</a></li>
                             <li class="toctree-l2"><a href="../reference/guidelines.html" class="internal reference">Методические рекомендации по Odoo</a></li>
                             <li class="toctree-l2"><a href="../reference/upgrade_api.html" class="internal reference">API для обновления</a></li>
@@ -145,66 +145,66 @@
                                     <ul>
                                         <li class="list-group-item"><a href="#qweb-context" class="ripple internal reference">QWeb контекст</a></li>
                                         <li class="list-group-item"><a href="#template-declaration" class="ripple internal reference">Объеявление шаблона</a></li>
-                                        <li class="list-group-item"><a href="#escaping" class="ripple internal reference">Escaping</a></li>
+                                        <li class="list-group-item"><a href="#escaping" class="ripple internal reference">Вывод данных</a></li>
                                         <li class="list-group-item"><a href="#outputting-html" class="ripple internal reference">Вывод HTML</a></li>
-                                        <li class="list-group-item"><a href="#conditionals" class="ripple internal reference">Conditionals</a></li>
-                                        <li class="list-group-item"><a href="#iteration" class="ripple internal reference">Iteration</a></li>
-                                        <li class="list-group-item"><a href="#defining-attributes" class="ripple internal reference">Defining attributes</a></li>
-                                        <li class="list-group-item"><a href="#calling-other-templates" class="ripple internal reference">Calling other templates</a></li>
-                                        <li class="list-group-item"><a href="#to-learn-more-about-qweb" class="ripple internal reference">To Learn More About QWeb</a></li>
-                                        <li class="list-group-item"><a href="#exercise" class="ripple internal reference">Exercise</a></li>
+                                        <li class="list-group-item"><a href="#conditionals" class="ripple internal reference">Состояния</a></li>
+                                        <li class="list-group-item"><a href="#iteration" class="ripple internal reference">Перебор значений</a></li>
+                                        <li class="list-group-item"><a href="#defining-attributes" class="ripple internal reference">Определение атрибутов</a></li>
+                                        <li class="list-group-item"><a href="#calling-other-templates" class="ripple internal reference">Вызов других шаблонов</a></li>
+                                        <li class="list-group-item"><a href="#to-learn-more-about-qweb" class="ripple internal reference">Для более глубокого изучения QWeb</a></li>
+                                        <li class="list-group-item"><a href="#exercise" class="ripple internal reference">Упражнение</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li class="list-group-item"><a href="#widget-helpers" class="ripple internal reference">Widget Helpers</a>
+                        <li class="list-group-item"><a href="#widget-helpers" class="ripple internal reference">Помощники для Widget</a>
                             <ul>
-                                <li class="list-group-item"><a href="#widget-s-jquery-selector" class="ripple internal reference"><code >Widget</code>'s jQuery Selector</a></li>
-                                <li class="list-group-item"><a href="#easier-dom-events-binding" class="ripple internal reference">Easier DOM Events Binding</a></li>
+                                <li class="list-group-item"><a href="#widget-s-jquery-selector" class="ripple internal reference">jQuery Selector для <code >Widget</code></a></li>
+                                <li class="list-group-item"><a href="#easier-dom-events-binding" class="ripple internal reference">Простое связывание DOM событий</a></li>
                             </ul>
                         </li>
-                        <li class="list-group-item"><a href="#widget-events-and-properties" class="ripple internal reference">Widget Events and Properties</a>
+                        <li class="list-group-item"><a href="#widget-events-and-properties" class="ripple internal reference">События и свойства виджета</a>
                             <ul>
-                                <li class="list-group-item"><a href="#events" class="ripple internal reference">Events</a></li>
-                                <li class="list-group-item"><a href="#properties" class="ripple internal reference">Properties</a></li>
-                                <li class="list-group-item"><a href="#id3" class="ripple internal reference">Exercise</a></li>
+                                <li class="list-group-item"><a href="#events" class="ripple internal reference">События</a></li>
+                                <li class="list-group-item"><a href="#properties" class="ripple internal reference">Свойства</a></li>
+                                <li class="list-group-item"><a href="#id3" class="ripple internal reference">Упражнение</a></li>
                             </ul>
                         </li>
-                        <li class="list-group-item"><a href="#modify-existing-widgets-and-classes" class="ripple internal reference">Modify existing widgets and classes</a></li>
-                        <li class="list-group-item"><a href="#translations" class="ripple internal reference">Translations</a></li>
-                        <li class="list-group-item"><a href="#communication-with-the-odoo-server" class="ripple internal reference">Communication with the Odoo Server</a>
+                        <li class="list-group-item"><a href="#modify-existing-widgets-and-classes" class="ripple internal reference">Изменение существующих виджетов и классов</a></li>
+                        <li class="list-group-item"><a href="#translations" class="ripple internal reference">Система переводов на другие языки</a></li>
+                        <li class="list-group-item"><a href="#communication-with-the-odoo-server" class="ripple internal reference">Связь с сервером Odoo</a>
                             <ul>
-                                <li class="list-group-item"><a href="#contacting-models" class="ripple internal reference">Contacting Models</a></li>
+                                <li class="list-group-item"><a href="#contacting-models" class="ripple internal reference">Взаимодействие с моделями данных</a></li>
                                 <li class="list-group-item"><a href="#compoundcontext" class="ripple internal reference">CompoundContext</a></li>
-                                <li class="list-group-item"><a href="#queries" class="ripple internal reference">Queries</a></li>
+                                <li class="list-group-item"><a href="#queries" class="ripple internal reference">Запросы</a></li>
                             </ul>
                         </li>
-                        <li class="list-group-item"><a href="#exercises" class="ripple internal reference">Exercises</a></li>
-                        <li class="list-group-item"><a href="#existing-web-components" class="ripple internal reference">Existing web components</a>
+                        <li class="list-group-item"><a href="#exercises" class="ripple internal reference">Упражнения</a></li>
+                        <li class="list-group-item"><a href="#existing-web-components" class="ripple internal reference">Существующие веб-компоненты</a>
                             <ul>
-                                <li class="list-group-item"><a href="#the-action-manager" class="ripple internal reference">The Action Manager</a>
+                                <li class="list-group-item"><a href="#the-action-manager" class="ripple internal reference">Менеджер действий</a>
                                     <ul>
-                                        <li class="list-group-item"><a href="#using-the-action-manager" class="ripple internal reference">Using the Action Manager</a></li>
+                                        <li class="list-group-item"><a href="#using-the-action-manager" class="ripple internal reference">Использование менеджера действий</a></li>
                                     </ul>
                                 </li>
-                                <li class="list-group-item"><a href="#client-actions" class="ripple internal reference">Client Actions</a></li>
-                                <li class="list-group-item"><a href="#architecture-of-the-views" class="ripple internal reference">Architecture of the Views</a>
+                                <li class="list-group-item"><a href="#client-actions" class="ripple internal reference">Действия клиента</a></li>
+                                <li class="list-group-item"><a href="#architecture-of-the-views" class="ripple internal reference">Архитектура представлений</a>
                                     <ul>
-                                        <li class="list-group-item"><a href="#the-view-manager" class="ripple internal reference">The View Manager</a></li>
-                                        <li class="list-group-item"><a href="#the-views" class="ripple internal reference">The Views</a></li>
+                                        <li class="list-group-item"><a href="#the-view-manager" class="ripple internal reference">Менеджер представлений</a></li>
+                                        <li class="list-group-item"><a href="#the-views" class="ripple internal reference">Представления</a></li>
                                     </ul>
                                 </li>
-                                <li class="list-group-item"><a href="#the-form-view-fields" class="ripple internal reference">The Form View Fields</a>
+                                <li class="list-group-item"><a href="#the-form-view-fields" class="ripple internal reference">Поля представления вид Form</a>
                                     <ul>
-                                        <li class="list-group-item"><a href="#creating-a-new-type-of-field" class="ripple internal reference">Creating a New Type of Field</a>
+                                        <li class="list-group-item"><a href="#creating-a-new-type-of-field" class="ripple internal reference">Создание нового типа поля</a>
                                             <ul>
-                                                <li class="list-group-item"><a href="#simple-read-only-field" class="ripple internal reference">Simple Read-Only Field</a></li>
-                                                <li class="list-group-item"><a href="#read-write-field" class="ripple internal reference">Read-Write Field</a></li>
+                                                <li class="list-group-item"><a href="#simple-read-only-field" class="ripple internal reference">Простое поле только для чтения</a></li>
+                                                <li class="list-group-item"><a href="#read-write-field" class="ripple internal reference">Поле для чтения-записи</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="list-group-item"><a href="#the-form-view-custom-widgets" class="ripple internal reference">The Form View Custom Widgets</a></li>
+                                <li class="list-group-item"><a href="#the-form-view-custom-widgets" class="ripple internal reference">Пользовательские виджеты для представления вида Form</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -1307,7 +1307,7 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
                             </div>
                         </dd><dt><code >kwargs</code></dt>
                         <dd>
-                            <p>a mapping of <a href="https://docs.python.org/2/glossary.html#term-argument" class="external reference">keyword arguments</a> to pass. The example provides a single named argument <code>context</code>.</p>
+                            <p>Отображение<a href="https://docs.python.org/2/glossary.html#term-argument" class="external reference">аргументов колючевого слова</a> для передачи. В примере представлен одиночный аргумент. <code>контекста</code>.</p>
                             <div class="highlight-python">
                                 <div class="highlight"><pre><span class="nd">@api.model</span>
 <span class="k">def</span> <span class="nf">my_method2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span> <span class="o">...</span>
@@ -1320,22 +1320,18 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
                             </div>
                         </dd>
                     </dl>
-                    <p><code class="js-func xref js">call()</code> returns a deferred resolved with the value returned by the model's method as first argument.</p>
+                    <p><code class="js-func xref js">call()</code> возвращает отложенное разрешенное значение, возвращаемое методом модели данных в качестве первого аргумента.</p>
                 </section>
                 <section id="compoundcontext">
                     <h3>CompoundContext</h3>
-                    <p>The previous section used a <code>context</code> argument which was not explained in the method call:</p>
+                    <p>Предыдущий раздел использовал аргумент <code>контекста</code> который не был объяснен в вызове метода:</p>
                     <div class="highlight-javascript">
                         <div class="highlight"><pre><span class="nx">model</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s2">&quot;my_method&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">context</span><span class="o">:</span> <span class="k">new</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">CompoundContext</span><span class="p">()})</span>
 </pre></div>
                     </div>
-                    <p>The context is like a &quot;magic&quot; argument that the web client will always give to the server when calling a method. The context is a dictionary containing multiple keys. One of the most important key is the language of the user,
-                        used by the server to translate all the messages of the application. Another one is the time zone of the user, used to compute correctly dates and times if Odoo is used by people in different countries.</p>
-                    <p>The <code>argument</code> is necessary in all methods, otherwise bad things could happen (such as the application not being translated correctly). That's why, when you call a model's method, you should always provide that argument.
-                        The solution to achieve that is to use <code class="js-class xref js">openerp.web.CompoundContext()</code>.</p>
-                    <p><code class="js-class xref js">CompoundContext()</code> is a class used to pass the user's context (with language, time zone, etc...) to the server as well as adding new keys to the context (some models' methods use arbitrary keys
-                        added to the context). It is created by giving to its constructor any number of dictionaries or other <code class="js-class xref js">CompoundContext()</code> instances. It will merge all those contexts before sending them to the
-                        server.</p>
+                    <p>Контекст подобен &quot;магическому&quot; аргументу, который веб-клиент всегда будет выдавать серверу при вызове метода. Контекст - это словарь, содержащий несколько ключей. Одним из наиболее важных ключей является язык пользователя, используемый сервером для перевода всех сообщений приложения. Другой - часовой пояс пользователя, используемый для правильного вычисления дат и времени, для одновременного использования Odoo людьми в находящихся в разных странах.</p>
+                    <p> <code>Аргумент</code> необходим во всех методах, в противном случае могут произойти плохие вещи (например, приложение неправильно переводится). Вот почему, когда вы вызываете метод модели данных, вы всегда должны предоставлять этот аргумент. Решением этого является использование<code class="js-class xref js">openerp.web.CompoundContext()</code>.</p>
+                    <p><code class="js-class xref js">CompoundContext()</code> это класс, используемый для передачи пользователю контекста (с языком, часовым поясом и т. Д.) На сервер, а также добавление новых ключей в контекст (в некоторых моделях данных используются произвольные ключи, добавленные в контекст). Он создается путем предоставления его конструктору любого количества словарей или других экземпляров <code class="js-class xref js">CompoundContext()</code>.  Он объединит все эти контексты перед отправкой их на сервер.</p>
                     <div class="highlight-javascript">
                         <div class="highlight"><pre><span class="nx">model</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s2">&quot;my_method&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">context</span><span class="o">:</span> <span class="k">new</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">CompoundContext</span><span class="p">({</span><span class="s1">&#39;new_key&#39;</span><span class="o">:</span> <span class="s1">&#39;key_value&#39;</span><span class="p">})})</span>
 </pre></div>
@@ -1347,18 +1343,15 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
     <span class="o">//</span> <span class="n">will</span> <span class="k">print</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en_US&#39;</span><span class="p">,</span> <span class="s">&#39;new_key&#39;</span><span class="p">:</span> <span class="s">&#39;key_value&#39;</span><span class="p">,</span> <span class="s">&#39;tz&#39;</span><span class="p">:</span> <span class="s">&#39;Europe/Brussels&#39;</span><span class="p">,</span> <span class="s">&#39;uid&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
                     </div>
-                    <p>You can see the dictionary in the argument <code>context</code> contains some keys that are related to the configuration of the current user in Odoo plus the
-                        <code>new_key</code> key that was added when instantiating
-                        <code class="js-class xref js">CompoundContext()</code>.</p>
+                    <p>Вы можете видеть, что словарь в <code>контексте</code> одержит некоторые ключи, которые связаны с конфигурацией текущего пользователя в Odoo плюс ключ <code>new_key</code> который был добавлен при создании <code class="js-class xref js">CompoundContext()</code>.</p>
                 </section>
                 <section id="queries">
-                    <h3>Queries</h3>
-                    <p>While <a href="../reference/javascript.html#openerp.Model.call" class="internal reference" title="openerp.Model.call"><code class="js-func xref js">call()</code></a> is sufficient for any interaction with Odoo models, Odoo Web provides
-                        a helper for simpler and clearer querying of models (fetching of records based on various conditions):
-                        <a href="../reference/javascript.html#openerp.Model.query" class="internal reference" title="openerp.Model.query"><code class="js-func xref js">query()</code></a> which acts as a shortcut for the common combination of
+                    <h3>Запросы</h3>
+                    <p>В то время как <a href="../reference/javascript.html#openerp.Model.call" class="internal reference" title="openerp.Model.call"><code class="js-func xref js">call()</code></a> достаточен для любого взаимодействия с моделями данных Odoo, Odoo Web предоставляет помощника для более простого и ясного формирования запросов к моделям данных (выборки записей на основе различных условий):
+                        <a href="../reference/javascript.html#openerp.Model.query" class="internal reference" title="openerp.Model.query"><code class="js-func xref js">query()</code></a> который действует как сокращение до простой комбинации
                         <a href="../reference/orm.html#openerp.models.Model.search"
-                            class="internal reference" title="openerp.models.Model.search"><code class="py py-meth xref">search()</code></a> and :
-                            <a href="../reference/orm.html#openerp.models.Model.read" class="internal reference" title="openerp.models.Model.read"><code class="py py-meth xref">read()</code></a>. It provides a clearer syntax to search and read models:</p>
+                            class="internal reference" title="openerp.models.Model.search"><code class="py py-meth xref">search()</code></a> и :
+                            <a href="../reference/orm.html#openerp.models.Model.read" class="internal reference" title="openerp.models.Model.read"><code class="py py-meth xref">read()</code></a>. Он обеспечивает более четкий синтаксис для поиска и чтения моделей данных:</p>
                     <div class="highlight-javascript">
                         <div class="highlight"><pre><span class="nx">model</span><span class="p">.</span><span class="nx">query</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="s1">&#39;user_email&#39;</span><span class="p">,</span> <span class="s1">&#39;signature&#39;</span><span class="p">])</span>
      <span class="p">.</span><span class="nx">filter</span><span class="p">([[</span><span class="s1">&#39;active&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;company_id&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="nx">main_company</span><span class="p">]])</span>
@@ -1368,7 +1361,7 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
 <span class="p">});</span>
 </pre></div>
                     </div>
-                    <p>versus:</p>
+                    <p>против:</p>
                     <div class="highlight-javascript">
                         <div class="highlight"><pre><span class="nx">model</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">&#39;search&#39;</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;active&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;company_id&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="nx">main_company</span><span class="p">]],</span> <span class="p">{</span><span class="nx">limit</span><span class="o">:</span> <span class="mi">15</span><span class="p">})</span>
     <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">ids</span><span class="p">)</span> <span class="p">{</span>
@@ -1380,27 +1373,23 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
 </pre></div>
                     </div>
                     <ul>
-                        <li><code class="js-func xref js">query()</code> takes an optional list of fields as parameter (if no field is provided, all fields of the model are fetched). It returns a
+                        <li><code class="js-func xref js">query()</code> принимает необязательный список полей в качестве параметра (если не указано ни одного поля, выбираются все поля модели данных). Он возвращает
                             <a href="../reference/javascript.html#openerp.web.Query" class="internal reference"
-                                title="openerp.web.Query"><code class="js-class xref js">openerp.web.Query()</code></a> which can be further customized before being executed</li>
-                        <li><a href="../reference/javascript.html#openerp.web.Query" class="internal reference" title="openerp.web.Query"><code class="js-class xref js">Query()</code></a> represents the query being built. It is immutable, methods to customize
-                            the query actually return a modified copy, so it's possible to use the original and the new version side-by-side. See
-                            <a href="../reference/javascript.html#openerp.web.Query" class="internal reference" title="openerp.web.Query"><code class="js-class xref js">Query()</code></a> for its customization options.</li>
+                                title="openerp.web.Query"><code class="js-class xref js">openerp.web.Query()</code></a> который может быть дополнительно настроен перед выполнением</li>
+                        <li><a href="../reference/javascript.html#openerp.web.Query" class="internal reference" title="openerp.web.Query"><code class="js-class xref js">Query()</code></a> представляет собой построенный запрос. Он неизменен, методы для настройки запроса фактически возвращают измененную копию, поэтому можно использовать оригинальную и новую версии бок о бок. Смотрите
+                            <a href="../reference/javascript.html#openerp.web.Query" class="internal reference" title="openerp.web.Query"><code class="js-class xref js">Query()</code></a> для настройки его параметров .</li>
                     </ul>
-                    <p>When the query is set up as desired, simply call
-                        <a href="../reference/javascript.html#openerp.web.Query.all" class="internal reference" title="openerp.web.Query.all"><code class="js-func xref js">all()</code></a> to execute it and return a deferred to its result. The result
-                        is the same as
-                        <a href="../reference/orm.html#openerp.models.Model.read" class="internal reference" title="openerp.models.Model.read"><code class="py py-meth xref">read()</code></a>'s, an array of dictionaries where each dictionary is a requested
-                        record, with each requested field a dictionary key.</p>
+                    <p>Когда запрос настроен так как вам нужно, просто вызовите функцию
+                        <a href="../reference/javascript.html#openerp.web.Query.all" class="internal reference" title="openerp.web.Query.all"><code class="js-func xref js">all()</code></a> чтобы выполнить его, и верните отложенный вызов к его результату. Результат - то же самое, что и
+                        <a href="../reference/orm.html#openerp.models.Model.read" class="internal reference" title="openerp.models.Model.read"><code class="py py-meth xref">read()</code></a>, массив словарей, где каждый словарь является запрошенной записью, при этом каждое запрошенное поле является словарным ключом.</p>
                 </section>
                 <section id="exercises">
-                    <h2>Exercises</h2>
+                    <h2>Упражнения</h2>
                     <div role="alert" class="alert-exercise alert">
-                        <p class="alert-title">Exercise</p>
-                        <p>Message of the Day</p>
-                        <p>Create a <code>MessageOfTheDay</code> widget displaying the last record of the
-                            <code>oepetstore.message_of_the_day</code> model. The widget should fetch its record as soon as it is displayed.</p>
-                        <p>Display the widget in the Pet Store home page.</p>
+                        <p class="alert-title">Упражнение</p>
+                        <p>Послание дня</p>
+                        <p>Создайте виджет <code>MessageOfTheDay</code> тображающий последнюю запись модели данных <code>oepetstore.message_of_the_day</code>. Виджет должен получать свою запись сразу после ее отображения.</p>
+                        <p>Отобразите виджет на домашней странице Pet Store</p>
                         <div class="highlight-javascript">
                             <div class="highlight"><pre><span class="nx">openerp</span><span class="p">.</span><span class="nx">oepetstore</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">instance</span><span class="p">,</span> <span class="nx">local</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">_t</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">_t</span><span class="p">,</span>
@@ -1459,16 +1448,15 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
                         </div>
                     </div>
                     <div role="alert" class="alert-exercise alert">
-                        <p class="alert-title">Exercise</p>
-                        <p>Pet Toys List</p>
-                        <p>Create a <code>PetToysList</code> widget displaying 5 toys (using their name and their images).</p>
-                        <p>The pet toys are not stored in a new model, instead they're stored in
-                            <code>product.product</code> using a special category <em>Pet Toys</em>. You can see the pre-generated toys and add new ones by going to
-                            <span class="menuselection">Pet Store ‣ Pet Store ‣ Pet Toys</span>. You will probably need to explore <code>product.product</code> to create the right domain to select just pet toys.</p>
-                        <p>In Odoo, images are generally stored in regular fields encoded as
-                            <a href="http://en.wikipedia.org/wiki/Base64" class="external reference alert-link">base64</a>, HTML supports displaying images straight from base64 with
-                            <code class="samp">&lt;img src=&quot;data:<em >mime_type</em>;base64,<em >base64_image_data</em>&quot;/&gt;</code></p>
-                        <p>The <code>PetToysList</code> widget should be displayed on the home page on the right of the <code>MessageOfTheDay</code> widget. You will need to make some layout with CSS to achieve this.</p>
+                        <p class="alert-title">Упражнение</p>
+                        <p>Список игрушек для домашних животных</p>
+                        <p>Создайте виджет<code>PetToysList</code>, отображающий 5 игрушек (используя их имя и их изображения)..</p>
+                        <p>Игрушки для животных не хранятся в новой модели, вместо этого они хранятся в
+                            <code>product.product</code> с использованием специальной категории <em>Pet Toys</em>. Вы можете увидеть заранее сгенерированные игрушки и добавить новые, зайдя в
+                            <span class="menuselection">Pet Store ‣ Pet Store ‣ Pet Toys</span>. Вам, вероятно, понадобится изучить <code>product.product</code> чтобы создать правильный домен, чтобы выбрать только игрушки для домашних животных.</p>
+                        <p>В Odoo, изображения обычно хранятся в обычных полях, закодированных как
+                            <a href="http://en.wikipedia.org/wiki/Base64" class="external reference alert-link">base64</a>, HTML поддерживает вывод изображений прямо из base64 с помощью <code class="samp">&lt;img src=&quot;data:<em >mime_type</em>;base64,<em >base64_image_data</em>&quot;/&gt;</code></p>
+                        <p>The <code>PetToysList</code> Виджет PetToysList должен отображаться на домашней странице справа от виджета <code>MessageOfTheDay</code>. Для этого вам понадобится сделать макет с CSS.</p>
                         <div class="highlight-javascript">
                             <div class="highlight"><pre><span class="nx">openerp</span><span class="p">.</span><span class="nx">oepetstore</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">instance</span><span class="p">,</span> <span class="nx">local</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">_t</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">_t</span><span class="p">,</span>
@@ -1584,20 +1572,18 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
                     </div>
                 </section>
                 <section id="existing-web-components">
-                    <h2>Existing web components</h2></section>
+                    <h2>Существующие веб-компоненты</h2></section>
                 <section id="the-action-manager">
-                    <h3>The Action Manager</h3>
-                    <p>In Odoo, many operations start from an <a href="../reference/actions.html#reference-actions" class="internal reference"><span >action</span></a>: opening a menu item (to a view), printing a report, ...</p>
-                    <p>Actions are pieces of data describing how a client should react to the activation of a piece of content. Actions can be stored (and read through a model) or they can be generated on-the fly (locally to the client by javascript code,
-                        or remotely by a method of a model).</p>
-                    <p>In Odoo Web, the component responsible for handling and reacting to these actions is the <em>Action Manager</em>.</p>
+                    <h3>Менеджер действий</h3>
+                    <p>В Odoo,многие операции начинаются с <a href="../reference/actions.html#reference-actions" class="internal reference"><span >действия</span></a>: открытие элемента меню (для вида), печать отчета, ... </p>
+                    <p>Действия - это фрагменты данных, описывающие реакцию клиента на активацию части содержимого. Действия могут быть сохранены (и считаны с помощью модели данных), или они могут быть сгенерированы «на лету» (локально для клиента кодом javascript или дистанционно с помощью метода модели данных).</p>
+                    <p>В Odoo Web,  компонентом, ответственным за обработку и реакцию на эти действия, является <em>Менеджер действий.</em>.</p>
                 </section>
                 <section id="using-the-action-manager">
-                    <h4>Using the Action Manager</h4>
-                    <p>The action manager can be invoked explicitly from javascript code by creating a dictionary describing <a href="../reference/actions.html#reference-actions" class="internal reference"><span >an action</span></a> of the right type, and
-                        calling an action manager instance with it.</p>
-                    <p><code class="js-func xref js">do_action()</code> is a shortcut of <a href="../reference/javascript.html#openerp.Widget" class="internal reference" title="openerp.Widget"><code class="js-class xref js">Widget()</code></a> looking up
-                        the &quot;current&quot; action manager and executing the action:</p>
+                    <h4>Использование менеджера действий</h4>
+                    <p>Менеджер действий может быть явно вызван из кода javascript, создав словарь, описывающий <a href="../reference/actions.html#reference-actions" class="internal reference"><span >действие</span></a> нужного типа, и вызов экземпляра менеджера действий вместе с ним.</p>
+                    <p><code class="js-func xref js">do_action()</code> это ссылка <a href="../reference/javascript.html#openerp.Widget" class="internal reference" title="openerp.Widget"><code class="js-class xref js">Widget()</code></a> просматривающий
+                         &quot;текущий&quot; менеджер действий и выполняющий действие:</p>
                     <div class="highlight-javascript">
                         <div class="highlight"><pre><span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">TestWidget</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">Widget</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
     <span class="nx">dispatch_to_new_action</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -1613,20 +1599,23 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
 <span class="p">});</span>
 </pre></div>
                     </div>
-                    <p>The most common action <code>type</code> is <code>ir.actions.act_window</code> which provides views to a model (displays a model in various manners), its most common attributes are:</p>
+                    <p>Наиболее распространенный <code>тип</code> действия <code>ir.actions.act_window</code> который предоставляет представления к модели (отображает модель различными способами), ее наиболее распространенными атрибутами являются:</p>
                     <dl><dt><code >res_model</code></dt>
-                        <dd>The model to display in views</dd><dt><code >res_id</code> (optional)</dt>
-                        <dd>For form views, a preselected record in <code>res_model</code></dd><dt><code >views</code></dt>
-                        <dd>Lists the views available through the action. A list of
-                            <code>[view_id, view_type]</code>, <code>view_id</code> can either be the database identifier of a view of the right type, or <code>false</code> to use the view by default for the specified type. View types can not be present
-                            multiple times. The action will open the first view of the list by default.</dd><dt><code >target</code></dt>
-                        <dd>Either <code>current</code> (the default) which replaces the &quot;content&quot; section of the web client by the action, or <code>new</code> to open the action in a dialog box.</dd><dt><code >context</code></dt>
-                        <dd>Additional context data to use within the action.</dd>
+                        <dd>Модель для отображения в представлениях</dd>
+                        <dt><code >res_id</code> (необязательно)</dt>
+                        <dd>Для представлений вида Form предварительно выбранная запись <code>res_model</code></dd>
+                        <dt><code >Представления</code></dt>
+                        <dd>Список представлений доступен через действие. Список
+                            <code>[view_id, view_type]</code>, <code>view_id</code> может быть либо идентификатором представления правильного типа в базе данных , либо <code>false</code> чтобы использовать представление по умолчанию для указанного типа. Типы представлений не могут присутствовать несколько раз. Действие по умолчанию откроет первое представление из списка.</dd>
+                            <dt><code >target</code></dt>
+                        <dd>Либо <code>current </code> (по умолчанию) который заменяет раздел &quot;content&quot; веб-клиента действием, либо <code>new </code>  чтобы открыть действие в диалоговом окне </dd>
+                        <dt><code >context</code></dt>
+                        <dd>Дополнительные данные контекста для использования в действии.</dd>
                     </dl>
                     <div role="alert" class="alert-exercise alert">
-                        <p class="alert-title">Exercise</p>
-                        <p>Jump to Product</p>
-                        <p>Modify the <code>PetToysList</code> component so clicking on a toy replaces the homepage by the toy's form view.</p>
+                        <p class="alert-title">Упражнение</p>
+                        <p>Перейти к продукту</p>
+                        <p>Измените компонент <code>PetToysList</code> оэтому нажатие на игрушку заменяет домашнюю страницу видом формы игрушки.</p>
                         <div class="highlight-javascript">
                             <div class="highlight"><pre><span class="nx">local</span><span class="p">.</span><span class="nx">PetToysList</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">Widget</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
     <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;PetToysList&#39;</span><span class="p">,</span>
@@ -1669,30 +1658,28 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
                     </div>
                 </section>
                 <section id="client-actions">
-                    <h3>Client Actions</h3>
-                    <p>Throughout this guide, we used a simple <code>HomePage</code> widget which the web client automatically starts when we select the right menu item. But how did the Odoo web know to start this widget? Because the widget is registered
-                        as a <em>client action</em>.</p>
-                    <p>A client action is (as its name implies) an action type defined almost entirely in the client, in javascript for Odoo web. The server simply sends an action tag (an arbitrary name), and optionally adds a few parameters, but beyond
-                        that <em>everything</em> is handled by custom client code.</p>
-                    <p>Our widget is registered as the handler for the client action through this:</p>
+                    <h3>Действия клиента</h3>
+                    <p>В этом руководстве мы использовали простой виджет <code>HomePage</code>  который автоматически запускается веб-клиентом, когда мы выбираем нужный пункт меню. Но как веб-клиент Odoo узнал о том, что нужно запустить именно этот виджет? Это потому, что виджет зарегистрирован как <em>действие клиента</em>.</p>
+                    <p>Клиентское действие (как следует из его названия) является типом действия, определенным почти полностью в клиенте, в javascript для веб-клиента Odoo. Сервер просто отправляет тег действия (произвольное имя) и, при необходимости, добавляет несколько параметров, но помимо этого <em>всё</em> обрабатывается пользовательским кодом клиента.</p>
+                    <p>Наш виджет зарегистрирован как обработчик для действия клиента следующим образом:</p>
                     <div class="highlight-javascript">
                         <div class="highlight"><pre><span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">client_actions</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;petstore.homepage&#39;</span><span class="p">,</span> <span class="s1">&#39;instance.oepetstore.HomePage&#39;</span><span class="p">);</span>
 </pre></div>
                     </div>
-                    <p><code>instance.web.client_actions</code> is a <code class="js-class xref js">Registry()</code> in which the action manager looks up client action handlers when it needs to execute one. The first parameter of <code class="js-class xref js">add()</code>                        is the name (tag) of the client action, and the second parameter is the path to the widget from the Odoo web client root.</p>
-                    <p>When a client action must be executed, the action manager looks up its tag in the registry, walks the specified path and displays the widget it finds at the end.</p>
+                    <p><code>instance.web.client_actions</code> это <code class="js-class xref js">Registry()</code> в котором менеджер действий ищет обработчики действий клиента, когда ему нужно его выполнить. Первый параметр  <code class="js-class xref js">add()</code> это имя (тег) действия клиента, а вторым параметром является путь к виджету из корня веб-клиента Odoo.</p>
+                    <p>Когда клиентское действие должно быть выполнено, менеджер действий ищет свой тег в реестре, проходит указанный путь и отображает виджет, который он находит в конце.</p>
                     <div role="alert" class="alert-info alert">
-                        <p class="alert-title">Note</p>
-                        <p>a client action handler can also be a regular function, in whch case it'll be called and its result (if any) will be interpreted as the next action to execute.</p>
+                        <p class="alert-title">Примечание</p>
+                        <p>обработчик действий клиента также может быть регулярной функцией, в случае, когда он будет вызван, и его результат (если он есть) будет интерпретироваться как следующее действие для выполнения.</p>
                     </div>
-                    <p>On the server side, we had simply defined an <code>ir.actions.client</code> action:</p>
+                    <p>На стороне сервера мы просто определили действие <code>ir.actions.client</code>:</p>
                     <div class="highlight-xml">
                         <div class="highlight"><pre><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;action_home_page&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.actions.client&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;tag&quot;</span><span class="nt">&gt;</span>petstore.homepage<span class="nt">&lt;/field&gt;</span>
 <span class="nt">&lt;/record&gt;</span>
 </pre></div>
                     </div>
-                    <p>and a menu opening the action:</p>
+                    <p>добавляем действие в нужный пункт меню:</p>
                     <div class="highlight-xml">
                         <div class="highlight"><pre><span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">&quot;home_page_petstore_menu&quot;</span> <span class="na">parent=</span><span class="s">&quot;petstore_menu&quot;</span>
           <span class="na">name=</span><span class="s">&quot;Home Page&quot;</span> <span class="na">action=</span><span class="s">&quot;action_home_page&quot;</span><span class="nt">/&gt;</span>
@@ -1700,84 +1687,71 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
                     </div>
                 </section>
                 <section id="architecture-of-the-views">
-                    <h3>Architecture of the Views</h3>
-                    <p>Much of Odoo web's usefulness (and complexity) resides in views. Each view type is a way of displaying a model in the client.</p>
+                    <h3>Архитектура представлений</h3>
+                    <p>Значительная часть полезносных качест (и соотвественно возникающих с этим сложностей) веб-клиента Odoo находится в представлениях. Каждый тип представления - это способ отображения модели на клиенте.</p>
                 </section>
                 <section id="the-view-manager">
-                    <h4>The View Manager</h4>
-                    <p>When an <code>ActionManager</code> instance receive an action of type
-                        <code>ir.actions.act_window</code>, it delegates the synchronization and handling of the views themselves to a <em>view manager</em>, which will then set up one or multiple views depending on the original action's requirements:</p>
+                    <h4>Менеджер представлений</h4>
+                    <p>Когда экземпляр <code>ActionManager</code> получает действие типа <code>ir.actions.act_window</code>, он делегирует синхронизацию и обработку самих представлений <em>менеджеру представлений</em>, который затем настраивает одно или несколько представлений в зависимости от требований исходного действия:</p>
                     <a href="../_images/viewarchitecture.svg" class="internal reference"><img src="../_images/viewarchitecture.svg" class="img-responsive center-block"></a>
                 </section>
                 <section id="the-views">
-                    <h4>The Views</h4>
-                    <p>Most <a href="../reference/views.html#reference-views" class="internal reference"><span >Odoo views</span></a> are implemented through a subclass of <code class="js-class xref js">openerp.web.View()</code> which provides a bit of generic
-                        basic structure for handling events and displaying model information.</p>
-                    <p>The <em>search view</em> is considered a view type by the main Odoo framework, but handled separately by the web client (as it's a more permanent fixture and can interact with other views, which regular views don't do).</p>
-                    <p>A view is responsible for loading its own description XML (using
-                        <a href="../reference/orm.html#openerp.models.Model.fields_view_get" class="internal reference" title="openerp.models.Model.fields_view_get"><code class="py xref py-class">fields_view_get</code></a>) and any other data source it
-                        needs. To that purpose, views are provided with an optional view identifier set as the <code class="js-attr xref js">view_id</code> attribute.</p>
-                    <p>Views are also provided with a <code class="js-class xref js">DataSet()</code> instance which holds most necessary model information (the model name and possibly various record ids).</p>
-                    <p>Views may also want to handle search queries by overriding
-                        <code class="js-func xref js">do_search()</code>, and updating their
-                        <code class="js-class xref js">DataSet()</code> as necessary.</p>
+                    <h4>Представления</h4>
+                    <p>Большинство <a href="../reference/views.html#reference-views" class="internal reference"><span >представлений Odoo</span></a> реализованы через подкласс <code class="js-class xref js">openerp.web.View()</code> который предоставляет немного общей базовой структуры для обработки событий и отображения информации о модели.</p>
+                    <p><em>Представление поиска</em> считается основным типом представления в Odoo фреймворке, но обрабатывается отдельно веб-клиентом (как правило оно является постоянным и может взаимодействовать с другими представлениями, чего не делают обычные представления)..</p>
+                    <p>Представление отвечает за загрузку собственного XML описания (с помощью <a href="../reference/orm.html#openerp.models.Model.fields_view_get" class="internal reference" title="openerp.models.Model.fields_view_get"><code class="py xref py-class">fields_view_get</code></a>) и любого другого источника данных, в котором он нуждается. С этой целью представления оснащаются необязательным идентификатором представления, заданным как атрибут <code class="js-attr xref js">view_id</code>.</p>
+                    <p>Представления также оснащаются экземпляром <code class="js-class xref js">DataSet()</code> который содержит самую необходимую информацию о модели данных (ее название и, возможно, различные идентификаторы записи).</p>
+                    <p>Представления также могут обрабатывать поисковые запросы путем переопределения
+                        <code class="js-func xref js">do_search()</code>, и при необходимости обновлять свой
+                        <code class="js-class xref js">DataSet()</code>.</p>
                 </section>
                 <section id="the-form-view-fields">
-                    <h3>The Form View Fields</h3>
-                    <p>A common need is the extension of the web form view to add new ways of displaying fields.</p>
-                    <p>All built-in fields have a default display implementation, a new form widget may be necessary to correctly interact with a new field type (e.g. a <a href="../glossary.html#term-gis" class="internal reference"><span class="std std-term xref">GIS</span></a>                        field) or to provide new representations and ways to interact with existing field types (e.g. validate
-                        <a href="../reference/orm.html#openerp.fields.Char" class="internal reference" title="openerp.fields.Char"><code class="py xref py-class">Char</code></a> fields which should contain email addresses and display them as email links).</p>
-                    <p>To explicitly specify which form widget should be used to display a field, simply use the <code>widget</code> attribute in the view's XML description:</p>
+                    <h3>Поля представления вид Form</h3>
+                    <p>Обычной потребностью является расширение представления вида Form для добавления новых способов отображения полей.</p>
+                    <p>Все встроенные поля имеют реализацию отображения по умолчанию, новый виджет формы может понадобиться для правильного взаимодействия с новым типом поля (например, поле <a href="../glossary.html#term-gis" class="internal reference"><span class="std std-term xref">ГИС</span></a>) или для предоставления новых образов и способов взаимодействия с существующими типами полей (например, проверки полей
+                        <a href="../reference/orm.html#openerp.fields.Char" class="internal reference" title="openerp.fields.Char"><code class="py xref py-class">Char</code></a> который должен содержать адреса электронной почты и отображать их в виде сообщений электронной почты.</p>
+                    <p>Чтобы явно указать, какой вид виджета следует использовать для отображения поля, просто используйте атрибут<code>widget</code>  в XML описании представления:</p>
                     <div class="highlight-xml">
                         <div class="highlight"><pre><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;contact_mail&quot;</span> <span class="na">widget=</span><span class="s">&quot;email&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
                     </div>
                     <div role="alert" class="alert-info alert">
-                        <p class="alert-title">Note</p>
+                        <p class="alert-title">Примечание</p>
                         <ul>
-                            <li>the same widget is used in both &quot;view&quot; (read-only) and &quot;edition&quot; modes of a form view, it's not possible to use a widget in one and an other widget in the other</li>
-                            <li>and a given field (name) can not be used multiple times in the same form</li>
-                            <li>a widget may ignore the current mode of the form view and remain the same in both view and edition</li>
+                            <li>один и тот же виджет представления вида Form используется как в режиме &quot;просмотра&quot; (только для чтения) и &quot;редактирования&quot;, нельзя использовать один виджет для одного режима а другой для другого</li>
+                            <li>одно и тоже поле(имя поля) нельзя использовать в представлении вида Form</li>
+                            <li>Виджет может игнорировать текущий режим представления вида Form и может оставаться неизменным как в режиме просмотра, так и в режиме редактирования</li>
                         </ul>
                     </div>
-                    <p>Fields are instantiated by the form view after it has read its XML description and constructed the corresponding HTML representing that description. After that, the form view will communicate with the field objects using some methods.
-                        These methods are defined by the <code>FieldInterface</code> interface. Almost all fields inherit the <code>AbstractField</code> abstract class. That class defines some default mechanisms that need to be implemented by most fields.</p>
-                    <p>Here are some of the responsibilities of a field class:</p>
+                    <p>Поля создаются экземпляром представления вида Form после того, как оно прочитало свое XML описание  и сформирован соответствующий HTML код, представляющий это описание. После этого представление вида Form будет взаимодействовать с объектами поля с использованием методов. Эти методы определены интерфейсом<code>FieldInterface</code>. Почти все поля наследуют абстрактный класс <code>AbstractField</code>.  Этот класс определяет некоторые механизмы по умолчанию, которые должны быть реализованы большинством полей.</p>
+                    <p>Вот некоторые из обязанностей класса поля:</p>
                     <ul>
-                        <li>The field class must display and allow the user to edit the value of the field.</li>
+                        <li>Класс поля должен отображать и разрешать пользователю редактировать значение поля.</li>
                         <li>
-                            <p>It must correctly implement the 3 field attributes available in all fields of Odoo. The <code>AbstractField</code> class already implements an algorithm that dynamically calculates the value of these attributes (they can change
-                                at any moment because their value change according to the value of other fields). Their values are stored in <em>Widget Properties</em> (the widget properties were explained earlier in this guide). It is the responsibility
-                                of each field class to check these widget properties and dynamically adapt depending of their values. Here is a description of each of these attributes:
+                            <p>Он должен правильно реализовать 3 атрибута поля, доступных во всех полях Odoo. Класс <code>AbstractField</code> уже реализует алгоритм, который динамически вычисляет значение этих атрибутов (они могут измениться в любой момент, потому что их значение изменяется в соответствии со значением других полей). Эти значения хранятся в <em>Widget Properties</em>  (свойства виджета были объяснены ранее в этом руководстве). Каждый класс поля несет ответственность за проверку свойств виджета и динамическую адаптацию в зависимости от их значений. Вот описание каждого из этих атрибутов
                             </p>
                             <ul>
-                                <li><code>required</code>: The field must have a value before saving. If <code>required</code> is <code>true</code> and the field doesn't have a value, the method
-                                    <code>is_valid()</code> of the field must return <code>false</code>.</li>
-                                <li><code>invisible</code>: When this is <code>true</code>, the field must be invisible. The
-                                    <code>AbstractField</code> class already has a basic implementation of this behavior that fits most fields.</li>
-                                <li><code>readonly</code>: When <code>true</code>, the field must not be editable by the user. Most fields in Odoo have a completely different behavior depending on the value of <code>readonly</code>. As example, the <code>FieldChar</code>                                    displays an HTML <code>&lt;input&gt;</code> when it is editable and simply displays the text when it is read-only. This also means it has much more code it would need to implement only one behavior, but this is necessary
-                                    to ensure a good user experience.
+                                <li><code>required</code>:  поле должно иметь значение перед сохранением. Если <code>required</code> емеет значение <code>true</code> и поле не имеет значения, метод поля <code>is_valid()</code> должен возвращать <code>false</code>.</li>
+                                <li><code>invisible</code>: Когда <code>true</code>, поле должно быть невидимым. Класс
+                                    <code>AbstractField</code> уже имеет базовую реализацию этого поведения, которая подходит для большинства полей.</li>
+                                <li><code>readonly</code>: Когда <code>true</code>, поле не должно давать пользователю отредактировать себя. Большинство полей Odoo  имеют совершенно другое поведение в зависимости от значения <code>readonly</code>.Например <code>FieldChar</code> отображает HTML <code>&lt;input&gt;</code> когда он редактируемый, и просто отображает текст, когда он доступен только для чтения. Это также означает, что у него гораздо больше кода, который ему потребуется для реализации только одного поведения, но это необходимо для обеспечения хорошего пользовательского опыта.
                                 </li>
                             </ul>
                         </li>
-                        <li>Fields have two methods, <code>set_value()</code> and <code>get_value()</code>, which are called by the form view to give it the value to display and get back the new value entered by the user. These methods must be able to handle
-                            the value as given by the Odoo server when a <code>read()</code> is performed on a model and give back a valid value for a <code>write()</code>. Remember that the JavaScript/Python data types used to represent the values given
-                            by <code>read()</code> and given to
-                            <code>write()</code> is not necessarily the same in Odoo. As example, when you read a many2one, it is always a tuple whose first value is the id of the pointed record and the second one is the name get (ie: <code>(15, &quot;Agrolait&quot;)</code>).
-                            But when you write a many2one it must be a single integer, not a tuple anymore. <code>AbstractField</code> has a default implementation of these methods that works well for simple data type and set a widget property named
-                            <code>value</code>.</li>
+                        <li>Поля имеют два метода <code>set_value()</code> и <code>get_value()</code>, которые вызываются представлением вида Form, чтобы придать ему значение для отображения и возврата к новому значению, введенному пользователем. Эти методы должны уметь обрабатывать значение, заданное сервером Odoo, когда выполняется функция <code>read()</code> для модели данных и возвращать допустимое значение для <code>write()</code>. Помните, что типы данных JavaScript / Python, используемые для представления значений, заданных <code>read()</code> и заданных
+                            <code>write()</code> не обязательно должны быть одинаковы в Odoo. Например, когда вы читаете many2one, это всегда кортеж, первым значением которого является идентификатор указанной записи, а вторым является имя (например: <code>(15, &quot;Agrolait&quot;)</code>).
+                            Но когда вы делаете запись в many2one, это должно быть одно целое число, а не кортеж. <code>AbstractField</code> имеет реализацию этих методов по умолчанию, которая хорошо работает для простых типов данных и устанавливает свойство виджета с именем <code>value</code>.</li>
                     </ul>
-                    <p>Please note that, to better understand how to implement fields, you are strongly encouraged to look at the definition of the <code>FieldInterface</code> interface and the <code>AbstractField</code> class directly in the code of the
-                        Odoo web client.
+                    <p>Обратите внимание, что для лучшего понимания того, как реализовать поля, вам настоятельно рекомендуется посмотреть определение интерфейса <code>FieldInterface</code> и класса <code>AbstractField</code> непосредственно в коде веб клиента Odoo.
                     </p>
                 </section>
                 <section id="creating-a-new-type-of-field">
-                    <h4>Creating a New Type of Field</h4>
-                    <p>In this part we will explain how to create a new type of field. The example here will be to re-implement the <code>FieldChar</code> class and progressively explain each part.</p>
+                    <h4>Создание нового типа поля</h4>
+                    <p>В этой части мы объясним, как создать новый тип поля. Примером здесь будет повторная реализация класса <code>FieldChar</code> и постепенное объяснение каждой части.</p>
                 </section>
                 <section id="simple-read-only-field">
-                    <h5>Simple Read-Only Field</h5>
-                    <p>Here is a first implementation that will only display text. The user will not be able to modify the content of the field.</p>
+                    <h5>Простое поле только для чтения</h5>
+                    <p>Вот первая реализация, которая будет отображать только текст. Пользователь не сможет изменять содержимое поля.</p>
                     <div class="highlight-javascript">
                         <div class="highlight"><pre><span class="nx">local</span><span class="p">.</span><span class="nx">FieldChar2</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">AbstractField</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
     <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -1792,23 +1766,14 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
 <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;char2&#39;</span><span class="p">,</span> <span class="s1">&#39;instance.oepetstore.FieldChar2&#39;</span><span class="p">);</span>
 </pre></div>
                     </div>
-                    <p>In this example, we declare a class named <code>FieldChar2</code> inheriting from
-                        <code>AbstractField</code>. We also register this class in the registry
-                        <code>instance.web.form.widgets</code> under the key <code>char2</code>. That will allow us to use this new field in any form view by specifying <code>widget=&quot;char2&quot;</code> in the
-                        <code>&lt;field/&gt;</code> tag in the XML declaration of the view.</p>
-                    <p>In this example, we define a single method: <code>render_value()</code>. All it does is display the widget property <code>value</code>. Those are two tools defined by the
-                        <code>AbstractField</code> class. As explained before, the form view will call the method <code>set_value()</code> of the field to set the value to display. This method already has a default implementation in <code>AbstractField</code>                        which simply sets the widget property <code>value</code>. <code>AbstractField</code> also watch the
-                        <code>change:value</code> event on itself and calls the <code>render_value()</code> when it occurs. So, <code>render_value()</code> is a convenience method to implement in child classes to perform some operation each time the value
-                        of the field changes.</p>
-                    <p>In the <code>init()</code> method, we also define the default value of the field if none is specified by the form view (here we assume the default value of a
-                        <code>char</code> field should be an empty string).</p>
+                    <p>В этом примере мы объявляем класс с именем <code>FieldChar2</code> который является наследником <code>AbstractField</code>.Мы также регистрируем этот класс в реестре <code>instance.web.form.widgets</code> с ключом <code>char2</code>.  Это позволит нам использовать это новое поле в любом представлении вида Form, указав <code>widget=&quot;char2&quot;</code> в теге <code>&lt;field/&gt;</code> при создании XML описании представления.</p>
+                    <p>В этом примере мы определяем единственный метод: <code>render_value()</code>. Все, что он делает - так это отображает <code>value</code> свойства виджета. Это два инструмента, определенные классом <code>AbstractField</code>. Как объяснялось ранее, представление вида Form вызовет метод поля <code>set_value()</code>, чтобы установить отображаемое значение. У этого метода уже есть реализация по умолчанию в <code>AbstractField</code>которая просто устанавливает <code>value</code> свойства виджета. <code>AbstractField</code> также смотрит событие <code>change:value</code> направленное на себя и вызывает <code>render_value()</code>когда это происходит. Таким образом, <code>render_value()</code>  это удобный метод для реализации в дочерних классах выполнения некоторых операции каждый раз, когда изменяется значение поля.</p>
+                    <p>В методе <code>init()</code>, мы также определяем значение поля по умолчанию, если в представлении формы не указано ни одного (здесь мы предполагаем, что значение по умолчанию поля <code>char</code> должно быть пустой строкой).</p>
                 </section>
                 <section id="read-write-field">
-                    <h5>Read-Write Field</h5>
-                    <p>Read-only fields, which only display content and don't allow the user to modify it can be useful, but most fields in Odoo also allow editing. This makes the field classes more complicated, mostly because fields are supposed to handle
-                        both editable and non-editable mode, those modes are often completely different (for design and usability purpose) and the fields must be able to switch between modes at any moment.</p>
-                    <p>To know in which mode the current field should be, the <code>AbstractField</code> class sets a widget property named <code>effective_readonly</code>. The field should watch for changes in that widget property and display the correct
-                        mode accordingly. Example:
+                    <h5>Поле для чтения-записи</h5>
+                    <p>Поля, доступные только для чтения, которые отображают только контент и не позволяют пользователю изменять его, могут быть полезны, однако большинство полей в Odoo также позволяют себя редактировать. Это усложняет реализацию классов полей, главным образом потому, что поля должны обрабатывать как редактируемый, так и нередактируемый режим, эти режимы часто совершенно разные (для целей дизайна и удобства использования), и поля должны иметь возможность переключаться между режимами в любой момент.</p>
+                    <p>Чтобы узнать, в каком режиме должно быть текущее поле, класс <code>AbstractField</code> задает свойство виджета с именем <code>effective_readonly</code>. Поле должно следить за изменениями в этом свойстве виджета и соответственно отображать правильный режим. Например:
                     </p>
                     <div class="highlight-javascript">
                         <div class="highlight"><pre><span class="nx">local</span><span class="p">.</span><span class="nx">FieldChar2</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">AbstractField</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
@@ -1855,28 +1820,18 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
 <span class="nt">&lt;/t&gt;</span>
 </pre></div>
                     </div>
-                    <p>In the <code>start()</code> method (which is called immediately after a widget has been appended to the DOM), we bind on the event <code>change:effective_readonly</code>. That allows us to redisplay the field each time the widget property
-                        <code>effective_readonly</code> changes. This event handler will call
-                        <code>display_field()</code>, which is also called directly in <code>start()</code>. This
-                        <code>display_field()</code> was created specifically for this field, it's not a method defined in <code>AbstractField</code> or any other class. We can use this method to display the content of the field depending on the current
-                        mode.</p>
-                    <p>From now on the conception of this field is typical, except there is a lot of verifications to know the state of the <code>effective_readonly</code> property:</p>
+                    <p>В методе start <code>start()</code> (который вызывается сразу же после добавления виджета в DOM), мы связываемся с изменением события: <code>change:effective_readonly</code>.Это позволяет нам повторно отображать поле каждый раз, когда свойство виджета изменяет значение     <code>effective_readonly</code>. Этот обработчик будет вызывать<code>display_field()</code>, который также вызывается непосредственно в <code>start()</code>. Этот <code>display_field()</code> был создан специально для этого поля, это не метод, определенный в <code>AbstractField</code> или любом другом классе. Мы можем использовать этот метод для отображения содержимого поля в зависимости от текущего режима.</p>
+                    <p>С этого момента концепция этого поля является типичной, за исключением того, что есть много проверок, чтобы узнать состояние свойства  <code>effective_readonly</code>:</p>
                     <ul>
-                        <li>In the QWeb template used to display the content of the widget, it displays an <code>&lt;input type=&quot;text&quot; /&gt;</code> if we are in read-write mode and nothing in particular in read-only mode.</li>
-                        <li>In the <code>display_field()</code> method, we have to bind on the <code>change</code> event of the <code>&lt;input type=&quot;text&quot; /&gt;</code> to know when the user has changed the value. When it happens, we call the <code>internal_set_value()</code>                            method with the new value of the field. This is a convenience method provided by the
-                            <code>AbstractField</code> class. That method will set a new value in the <code>value</code> property but will not trigger a call to <code>render_value()</code> (which is not necessary since the <code>&lt;input type=&quot;text&quot; /&gt;</code>                            already contains the correct value).
+                        <li>В шаблоне QWeb используемом для отображения содержимого виджета, он отображает <code>&lt;input type=&quot;text&quot; /&gt;</code> если мы находимся в режиме чтения-записи и ничего, если в режиме только для чтения.</li>
+                        <li>В методе <code>display_field()</code>  мы должны привязать событие <code>change</code> для <code>&lt;input type=&quot;text&quot; /&gt;</code> чтобы знать, когда пользователь изменил значение. Когда это произойдет, мы вызываем метод <code>internal_set_value()</code>с новым значением поля. Это удобный метод, предоставляемый классом <code>AbstractField</code> Этот метод установит новое значение в свойстве <code>value</code>  но не вызовет вызов <code>render_value()</code> (это необязательно, поскольку <code>&lt;input type=&quot;text&quot; /&gt;</code> уже содержит правильное значение).
                         </li>
-                        <li>In <code>render_value()</code>, we use a completely different code to display the value of the field depending if we are in read-only or in read-write mode.</li>
+                        <li>В <code>render_value()</code>, мы используем совершенно другой код для отображения значения поля в зависимости от того, находимся ли мы в режиме только для чтения или в режиме чтения-записи.</li>
                     </ul>
                     <div role="alert" class="alert-exercise alert">
-                        <p class="alert-title">Exercise</p>
-                        <p>Create a Color Field</p>
-                        <p>Create a <code>FieldColor</code> class. The value of this field should be a string containing a color code like those used in CSS (example: <code>#FF0000</code> for red). In read-only mode, this color field should display a little
-                            block whose color corresponds to the value of the field. In read-write mode, you should display an <code>&lt;input type=&quot;color&quot; /&gt;</code>. That type of <code>&lt;input /&gt;</code> is an HTML5 component that doesn't
-                            work in all browsers but works well in Google Chrome. So it's OK to use as an exercise.</p>
-                        <p>You can use that widget in the form view of the <code>message_of_the_day</code> model for its field named <code>color</code>. As a bonus, you can change the
-                            <code>MessageOfTheDay</code> widget created in the previous part of this guide to display the message of the day with the background color indicated in the
-                            <code>color</code> field.</p>
+                        <p class="alert-title">Упражнение</p>
+                        <p>Создание цветового поля</p>
+                        <p>Создайте класс <code>FieldColor</code>. Значение этого поля должно быть строкой, содержащей код цвета, подобный используемому в CSS (пример: <code>#FF0000</code>  для красного цвета). В режиме только для чтения это цветовое поле должно отображать небольшой блок, цвет которого соответствует значению поля. В режиме чтения-записи вы должны отобразить  <code>&lt;input type=&quot;color&quot; /&gt;</code>. Этот тип  <code>&lt;input /&gt;</code> является компонентом HTML5, который работает не во всех браузерах, но хорошо работает в Google Chrome. Так что это нормально использовать в качестве упражнения.</p><p>Этот виджет можно использовать в виде формы модели данных <code>message_of_the_day</code> для его поля с именем <code>color</code>. В качестве бонуса вы можете изменить виджет <code>MessageOfTheDay</code> созданный в предыдущей части этого руководства, чтобы отобразить сообщение дня с цветом фона, указанным в поле <code>color</code>.</p>
                         <div class="highlight-javascript">
                             <div class="highlight"><pre><span class="nx">local</span><span class="p">.</span><span class="nx">FieldColor</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">AbstractField</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
     <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
@@ -1936,19 +1891,17 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
                     </div>
                 </section>
                 <section id="the-form-view-custom-widgets">
-                    <h3>The Form View Custom Widgets</h3>
-                    <p>Form fields are used to edit a single field, and are intrinsically linked to a field. Because this may be limiting, it is also possible to create
-                        <em>form widgets</em> which are not so restricted and have less ties to a specific lifecycle.
+                    <h3>Пользовательские виджеты для представления вида Form</h3>
+                    <p>Поля представления вида Form используются для редактирования одного поля и в основном связаны с этим полем. Поскольку это может быть ограничением, также возможно создавать<em>виджеты для представления вида Form</em> которые не являются настолько ограниченными и имеют меньше связей с конкретным жизненным циклом.
                     </p>
-                    <p>Custom form widgets can be added to a form view through the <code>widget</code> tag:</p>
+                    <p>Пользовательские виджеты для представления вида Form могут быть добавлены через тег <code>widget</code>:</p>
                     <div class="highlight-xml">
                         <div class="highlight"><pre><span class="nt">&lt;widget</span> <span class="na">type=</span><span class="s">&quot;xxx&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
                     </div>
-                    <p>This type of widget will simply be created by the form view during the creation of the HTML according to the XML definition. They have properties in common with the fields (like the <code>effective_readonly</code> property) but they
-                        are not assigned a precise field. And so they don't have methods like
-                        <code>get_value()</code> and <code>set_value()</code>. They must inherit from the <code>FormWidget</code> abstract class.</p>
-                    <p>Form widgets can interact with form fields by listening for their changes and fetching or altering their values. They can access form fields through their <code class="js-attr xref js">field_manager</code> attribute:</p>
+                    <p>Этот тип виджета будет просто создан представлением вида Form во время генерации HTML в соответствии с определением в XML описании. Они имеют общие свойства с полями (например, свойство <code>effective_readonly</code>  но им не присвоено точное поле. И поэтому они не имеют методов, таких как
+                        <code>get_value()</code> и <code>set_value()</code>. Они должны наследоваться от абстрактного класса<code>FormWidget</code>.</p>
+                    <p>Пользовательские виджеты для представления вида Form могут взаимодействовать с полями, слушая их изменения и получая или изменяя их значения. Они могут обращаться к полям представления через атрибут <code class="js-attr xref js">field_manager</code>:</p>
                     <div class="highlight-javascript">
                         <div class="highlight"><pre><span class="nx">local</span><span class="p">.</span><span class="nx">WidgetMultiplication</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">FormWidget</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
     <span class="nx">start</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -1967,18 +1920,18 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
 <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">custom_widgets</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;multiplication&#39;</span><span class="p">,</span> <span class="s1">&#39;instance.oepetstore.WidgetMultiplication&#39;</span><span class="p">);</span>
 </pre></div>
                     </div>
-                    <p><code class="js-attr xref js">FormWidget</code> is generally the
-                        <code class="js-class xref js">FormView()</code> itself, but features used from it should be limited to those defined by <code class="js-class xref js">FieldManagerMixin()</code>, the most useful being:</p>
+                    <p><code class="js-attr xref js">FormWidget</code> сам обычно является
+                        <code class="js-class xref js">FormView()</code>, но используемые в нем функции должны быть ограничены функциями, определенными <code class="js-class xref js">FieldManagerMixin()</code>, наиболее полезным образом:</p>
                     <ul>
-                        <li><code class="js-func xref js">get_field_value(field_name)()</code> which returns the value of a field.</li>
-                        <li><code class="js-func xref js">set_values(values)()</code> sets multiple field values, takes a mapping of <code>{field_name: value_to_set}</code></li>
-                        <li>An event <code class="samp">field_changed:<em >field_name</em></code> is triggered any time the value of the field called <code>field_name</code> is changed</li>
+                        <li><code class="js-func xref js">get_field_value(field_name)()</code>  которое возвращает значение поля.</li>
+                        <li><code class="js-func xref js">set_values(values)()</code> устанавливает несколько значений поля, принимает отображение <code>{field_name: value_to_set}</code></li>
+                        <li>Событие <code class="samp">field_changed:<em >field_name</em></code> запускается каждый раз, когда изменяется значение поля с именем <code>field_name</code></li>
                     </ul>
                     <div role="alert" class="alert-exercise alert">
-                        <p class="alert-title">Exercise</p>
-                        <p>Show Coordinates on Google Map</p>
-                        <p>Add two fields to <code>product.product</code> storing a latitude and a longitude, then create a new form widget to display the latitude and longitude of a product's origin on a map</p>
-                        <p>To display the map, use Google Map's embedding:</p>
+                        <p class="alert-title">Упражнение</p>
+                        <p>Показать координаты на карте Google</p>
+                        <p>Добавьте два поля <code>product.product</code> сохраняющих широту и долготу, а затем создайте новый виджет формы, чтобы отобразить широту и долготу происхождения товара на карте.</p>
+                        <p>Чтобы отобразить карту, используйте механизм интеграции Google Map в свой сайт:</p>
                         <div class="highlight-html">
                             <div class="highlight"><pre><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">&quot;400&quot;</span> <span class="na">height=</span><span class="s">&quot;300&quot;</span> <span class="na">src=</span><span class="s">&quot;https://maps.google.com/?ie=UTF8&amp;amp;ll=XXX,YYY&amp;amp;output=embed&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/iframe&gt;</span>
@@ -1986,7 +1939,7 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
                         </div>
                         <p>where <code>XXX</code> should be replaced by the latitude and <code>YYY</code> by the longitude.
                         </p>
-                        <p>Display the two position fields and a map widget using them in a new notebook page of the product's form view.</p>
+                        <p>Отобразите два поля позиции и виджет карты, используя их в новой вкладке в режиме notebook представления вида Form текущего товара.</p>
                         <div class="highlight-javascript">
                             <div class="highlight"><pre><span class="nx">local</span><span class="p">.</span><span class="nx">WidgetCoordinates</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">FormWidget</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
     <span class="nx">start</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -2016,14 +1969,13 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
                         </div>
                     </div>
                     <div role="alert" class="alert-exercise alert">
-                        <p class="alert-title">Exercise</p>
-                        <p>Get the Current Coordinate</p>
-                        <p>Add a button resetting the product's coordinates to the location of the user, you can get these coordinates using the
+                        <p class="alert-title">Упражнение</p>
+                        <p>Получение текущих координат</p>
+                        <p>Добавьте кнопку, переустановив координаты продукта в местоположение пользователя, вы можете получить эти координаты, используя API-интерфейс
                             <a href="http://diveintohtml5.info/geolocation.html" class="external reference alert-link">javascript geolocation API</a>.</p>
-                        <p>Now we would like to display an additional button to automatically set the coordinates to the location of the current user.</p>
-                        <p>To get the coordinates of the user, an easy way is to use the geolocation JavaScript API. <a href="http://www.w3schools.com/html/html5_geolocation.asp" class="external reference alert-link">See the online documentation to know how to use it</a>.</p>
-                        <p>Please also note that the user should not be able to click on that button when the form view is in read-only mode. So, this custom widget should handle correctly the <code>effective_readonly</code> property just like any field.
-                            One way to do this would be to make the button disappear when <code>effective_readonly</code> is true.</p>
+                        <p>Теперь мы хотим отобразить дополнительную кнопку, чтобы автоматически устанавливать координаты в положение текущего пользователя.</p>
+                        <p>Чтобы получить координаты пользователя, простым способом является использование JavaScript API-интерфейс. <a href="http://www.w3schools.com/html/html5_geolocation.asp" class="external reference alert-link">Смотрите онлайн-документацию, чтобы знать, как ее использовать.</a>.</p>
+                        <p>Также обратите внимание, что пользователь не должен нажимать на эту кнопку, когда вид формы находится в режиме только для чтения. Таким образом, этот пользовательский виджет должен корректно обрабатывать свойство <code>effective_readonly</code>  точно так же, как любое поле. Одним из способов сделать это было бы заставить кнопку исчезать, когда значение <code>effective_readonly</code> истинно.</p>
                         <div class="highlight-javascript">
                             <div class="highlight"><pre><span class="nx">local</span><span class="p">.</span><span class="nx">WidgetCoordinates</span> <span class="o">=</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">FormWidget</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
     <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
@@ -2068,9 +2020,8 @@ the developer mode</span>:</p><img src="../_images/about_odoo.png" class="img-re
 </pre></div>
                         </div>
                     </div>
-                    <div class="footnote" id="id4"><span class="footnote-label"><a class="footnote-backref" href="#id1">[1]</a></span> as a separate concept from instances. In many languages classes are full-fledged objects and themselves instance (of metaclasses) but there remains
-                        two fairly separate hierarchies between classes and instances</div>
-                    <div class="footnote" id="dombugs"><span class="footnote-label"><a class="footnote-backref" href="#id2">[2]</a></span> as well as papering over cross-browser differences, although this has become less necessary over time</div>
+                    <div class="footnote" id="id4"><span class="footnote-label"><a class="footnote-backref" href="#id1">[1]</a></span> как отдельное понятие из экземпляра. Во многих языках классы являются полноценными объектами а так же сами экземпляры (метаклассов), но это два достаточно разных поняти класс и экземпляр и между ними соблюдается четко прописанная иерархия</div>
+                    <div class="footnote" id="dombugs"><span class="footnote-label"><a class="footnote-backref" href="#id2">[2]</a></span> a а также о различиях между браузерами, хотя со временем это стало менее насущным </div>
                 </section>
 
             </article>
